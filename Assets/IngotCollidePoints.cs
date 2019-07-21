@@ -29,4 +29,12 @@ public class IngotCollidePoints : MonoBehaviour
             Metal.SendMessage("Snap", collider);
         }
     }
+
+    private void OnTriggerStay(Collider collider)
+    {
+        if (collider.gameObject.tag == "GrindWheel")
+        {
+            Metal.SendMessage("Forge", thisCollider);
+        }
+    }
 }

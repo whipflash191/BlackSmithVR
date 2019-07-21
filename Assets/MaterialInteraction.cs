@@ -10,7 +10,7 @@ using Valve.VR.InteractionSystem;
 
 public class MaterialInteraction : MonoBehaviour
 {
-    public enum Stage {Flatten, Lengthen, Tip, Tang};
+    public enum Stage {Flatten, Lengthen, Tip, Tang, Grind};
     public Stage currentForgeStage;
     Material material;
     public SkinnedMeshRenderer mesh;
@@ -87,7 +87,7 @@ public class MaterialInteraction : MonoBehaviour
 
         farestDistance = 0;
 
-        for (int i = 0; i < colliders.Count; i++)
+        for (int i = 0; i < 4; i++)
         {
             float d = Vector3.Distance(colliders[i].bounds.center, anvil.transform.position);
             if (d > farestDistance)
@@ -97,7 +97,7 @@ public class MaterialInteraction : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < colliders.Count; i++)
+        for (int i = 0; i < 4; i++)
         {
             if (colliders[i] != furtherestFromAnvil)
             {
@@ -111,7 +111,7 @@ public class MaterialInteraction : MonoBehaviour
     {
         if (collider == colliders[0])
         {
-            if(mesh.GetBlendShapeWeight(0) > 0)
+            if (mesh.GetBlendShapeWeight(0) > 0)
             {
                 mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) - 20));
             }
@@ -130,12 +130,44 @@ public class MaterialInteraction : MonoBehaviour
         else if (collider == colliders[2])
         {
             mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) + 20));
+            if (mesh.GetBlendShapeWeight(0) == 100)
+            {
+                currentForgeStage = Stage.Grind;
+                canHarden = true;
+                foreach (Collider item in colliders)
+                {
+                    if (item.gameObject.activeSelf == true)
+                    {
+                        item.gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        item.gameObject.SetActive(true);
+                    }
+                }
+            }
             //transform.localPosition = new Vector3(0.103f, 0, transform.localPosition.z);
             //transform.localScale = new Vector3(0.03f, transform.localScale.y, transform.localScale.z);
         }
         else if (collider == colliders[3])
         {
             mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) + 20));
+            if (mesh.GetBlendShapeWeight(0) == 100)
+            {
+                currentForgeStage = Stage.Grind;
+                canHarden = true;
+                foreach (Collider item in colliders)
+                {
+                    if (item.gameObject.activeSelf == true)
+                    {
+                        item.gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        item.gameObject.SetActive(true);
+                    }
+                }
+            }
             //transform.localPosition = new Vector3(-0.103f, 0, transform.localPosition.z);
             //transform.localScale = new Vector3(0.03f, transform.localScale.y, transform.localScale.z);
         }
@@ -190,20 +222,31 @@ public class MaterialInteraction : MonoBehaviour
         }
     }
 
+    private void ForgeGrind(Collider collider)
+    {
+        if (collider == colliders[4])
+        {
+            if (mesh.GetBlendShapeWeight(1) < 40)
+            {
+                mesh.SetBlendShapeWeight(1, (mesh.GetBlendShapeWeight(1) + 5));
+            }
+        } else if (collider == colliders[5])
+        {
+            if (mesh.GetBlendShapeWeight(1) < 40)
+            {
+                mesh.SetBlendShapeWeight(1, (mesh.GetBlendShapeWeight(1) + 5));
+            }
+        }
+    }
+
     private void Forge(Collider collider)
     {
         if (heatingProgress > 1 && isHardened == false || coolingProgress > 1 && isHardened == false)
         {
             if (currentForgeStage == Stage.Flatten)
             {
-                if (mesh.GetBlendShapeWeight(0) < 100)
-                {
                     ForgeFlatten(collider);
-                }
-                else
-                {
                     //currentForgeStage = Stage.Lengthen;
-                }
             }
             else if (currentForgeStage == Stage.Lengthen)
             {
@@ -229,6 +272,10 @@ public class MaterialInteraction : MonoBehaviour
                 ForgeTang(collider);
                 canHarden = true;
             }
+        }
+        else if (currentForgeStage == Stage.Grind && isHardened == true)
+        {
+            ForgeGrind(collider);
         }
     }
 

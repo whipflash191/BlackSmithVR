@@ -12,6 +12,7 @@ TagManager:
   - Guard
   - Handle
   - Quench
+  - GrindWheel
   layers:
   - Default
   - TransparentFX
