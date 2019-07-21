@@ -1800,7 +1800,7 @@ MonoBehaviour:
   cooling: 0
   isHardened: 0
   canHarden: 0
-  debug: 1
+  debug: 0
   GuardPos: {fileID: 0}
   HandlePos: {fileID: 0}
   isTip: 0
