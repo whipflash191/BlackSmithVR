@@ -228,6 +228,36 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &44191608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 44191609}
+  m_Layer: 0
+  m_Name: HandlePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &44191609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44191608}
+  m_LocalRotation: {x: 0.70708823, y: 0.7071253, z: -0.00000013240475, w: -0.00000013241169}
+  m_LocalPosition: {x: -0.4749999, y: 0.007999986, z: 0.0019999743}
+  m_LocalScale: {x: 0.04080427, y: 0.13015409, z: 0.06580218}
+  m_Children: []
+  m_Father: {fileID: 1303714149}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 89.997}
 --- !u!1 &78764342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,6 +1552,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1301239385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1301239386}
+  m_Layer: 0
+  m_Name: GuardPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1301239386
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301239385}
+  m_LocalRotation: {x: -0.0093027055, y: -0.71735936, z: 0.009033275, w: 0.6965827}
+  m_LocalPosition: {x: -0.319, y: 0.0069999993, z: -0.0019999743}
+  m_LocalScale: {x: 0.1607451, y: 0.04912806, z: 0.041500006}
+  m_Children: []
+  m_Father: {fileID: 1303714149}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: -91.684006, z: 1.4860001}
 --- !u!1001 &1303714146
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1801,8 +1861,8 @@ MonoBehaviour:
   isHardened: 0
   canHarden: 0
   debug: 0
-  GuardPos: {fileID: 0}
-  HandlePos: {fileID: 0}
+  GuardPos: {fileID: 1301239386}
+  HandlePos: {fileID: 44191609}
   isTip: 0
   isTang: 0
   colliders:

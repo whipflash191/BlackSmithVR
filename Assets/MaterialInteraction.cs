@@ -237,6 +237,23 @@ public class MaterialInteraction : MonoBehaviour
                 mesh.SetBlendShapeWeight(1, (mesh.GetBlendShapeWeight(1) + 5));
             }
         }
+
+        if (mesh.GetBlendShapeWeight(1) == 40)
+        {
+            currentForgeStage = Stage.Grind;
+            canHarden = true;
+            foreach (Collider item in colliders)
+            {
+                if (item.gameObject.activeSelf == true)
+                {
+                    item.gameObject.SetActive(false);
+                }
+                else
+                {
+                    item.gameObject.SetActive(true);
+                }
+            }
+        }
     }
 
     private void Forge(Collider collider)
