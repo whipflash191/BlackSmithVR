@@ -27,7 +27,21 @@ public class MaterialScript : MonoBehaviour
                 item.heating = true;
             }
         }
+
+        if(collision.gameObject.tag == "Quench")
+        {
+            foreach (MaterialInteraction item in materialPoints)
+            {
+                if(item.canHarden == true && item.heatingProgress > 1 || item.canHarden == true && item.coolingProgress > 1)
+                {
+                    item.isHardened = true;
+                    item.heatingProgress = 0;
+                    item.coolingProgress = 0;
+                }
+            }
+        }
     }
+
 
     private void OnCollisionExit(Collision collision)
     {

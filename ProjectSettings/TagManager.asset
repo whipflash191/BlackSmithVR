@@ -11,6 +11,7 @@ TagManager:
   - Hammer
   - Guard
   - Handle
+  - Quench
   layers:
   - Default
   - TransparentFX
