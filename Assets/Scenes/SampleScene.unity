@@ -1850,14 +1850,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentForgeStage: 0
   mesh: {fileID: 1303714148}
-  heatTime: 5
-  coolTime: 40000
-  heatingProgress: 0
-  coolingProgress: 0
+  heatTime: 1
+  coolTime: 2
+  tempratureProgress: 0
   temp: 0
   currentTime: 0
   heating: 0
-  cooling: 0
   isHardened: 0
   canHarden: 0
   debug: 0

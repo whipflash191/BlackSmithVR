@@ -17,12 +17,13 @@ public class MaterialInteraction : MonoBehaviour
     [Header("Heating")]
     public float heatTime;
     public float coolTime;
-    public float heatingProgress = 0;
-    public float coolingProgress = 0;
+    // public float heatingProgress = 0;
+    // public float coolingProgress = 0;
+    public float tempratureProgress = 0;
     public float temp;
     public float currentTime;
     public bool heating = false;
-    public bool cooling = false;
+   // public bool cooling = false;
     public bool isHardened = false;
     public bool canHarden = false;
     public bool debug = false;
@@ -50,30 +51,38 @@ public class MaterialInteraction : MonoBehaviour
     {
         if(heating)
         {
-            if(currentTime <= heatTime)
+            if(tempratureProgress < 2)
             {
-                currentTime += Time.deltaTime;
-                heatingProgress = Mathf.Lerp(coolingProgress, 2, currentTime / heatTime);
-                material.SetFloat("_HeatLerp", heatingProgress);
-                temp = (coolingProgress / 200) * 500;
-            }
-        }
-
-        if(cooling)
+                //currentTime += Time.deltaTime;
+                //heatingProgress = Mathf.Lerp(coolingProgress, 2, currentTime / heatTime);
+                tempratureProgress += Time.deltaTime * heatTime;
+                if(tempratureProgress > 2)
+                {
+                    tempratureProgress = 2;
+                }
+                material.SetFloat("_HeatLerp", tempratureProgress);
+                temp = (tempratureProgress / 200) * 500;
+            } 
+        } else
         {
-            if(currentTime <= coolTime)
+            if(tempratureProgress > 0)
             {
-                currentTime += Time.deltaTime;
-                coolingProgress = Mathf.Lerp(heatingProgress, 0, currentTime / heatTime);
-                material.SetFloat("_HeatLerp", coolingProgress);
-                temp = (coolingProgress / 200) * 500;
+                // currentTime += Time.deltaTime;
+                // coolingProgress = Mathf.Lerp(heatingProgress, 0, currentTime / heatTime);
+                tempratureProgress -= Time.deltaTime * coolTime;
+                if(tempratureProgress < 0)
+                {
+                    tempratureProgress = 0;
+                }
+                material.SetFloat("_HeatLerp", tempratureProgress);
+                temp = (tempratureProgress / 200) * 500;
             }
         }
 
         if(debug)
         {
-            coolingProgress = 2;
-            material.SetFloat("_HeatLerp", coolingProgress);
+           // coolingProgress = 2;
+           // material.SetFloat("_HeatLerp", coolingProgress);
         }
     }
 
@@ -258,7 +267,7 @@ public class MaterialInteraction : MonoBehaviour
 
     private void Forge(Collider collider)
     {
-        if (heatingProgress > 1 && isHardened == false || coolingProgress > 1 && isHardened == false)
+        if (tempratureProgress > 1 && isHardened == false)
         {
             if (currentForgeStage == Stage.Flatten)
             {
@@ -326,17 +335,18 @@ public class MaterialInteraction : MonoBehaviour
     {
         if (collision.gameObject.tag == "Fire")
         {
-            cooling = false;
+            //cooling = false;
             heating = true;
         }
 
         if (collision.gameObject.tag == "Quench")
         {
-            if (canHarden == true && heatingProgress > 1 || canHarden == true && coolingProgress > 1)
+            if (canHarden == true && tempratureProgress > 1)
             {
                 isHardened = true;
-                heatingProgress = 0;
-                coolingProgress = 0;
+                tempratureProgress = 0;
+                //heatingProgress = 0;
+               // coolingProgress = 0;
             }
         }
     }
@@ -345,9 +355,8 @@ public class MaterialInteraction : MonoBehaviour
     {
         if (collision.gameObject.tag == "Fire")
         {
-            cooling = true;
+            //cooling = true;
             heating = false;
-            currentTime = 0;
         }
     }
 }
