@@ -14,6 +14,8 @@ public class MaterialInteraction : MonoBehaviour
     public Stage currentForgeStage;
     Material material;
     public SkinnedMeshRenderer mesh;
+    public GameObject nextModel;
+
     [Header("Heating")]
     public float heatTime;
     public float coolTime;
@@ -124,8 +126,6 @@ public class MaterialInteraction : MonoBehaviour
             {
                 mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) - 20));
             }
-            //transform.localPosition = new Vector3(0, -0.103f, transform.localPosition.z);
-            //transform.localScale = new Vector3(transform.localScale.x, 0.03f, transform.localScale.z);
         }
         else if (collider == colliders[1])
         {
@@ -133,52 +133,28 @@ public class MaterialInteraction : MonoBehaviour
             {
                 mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) - 20));
             }
-            //transform.localPosition = new Vector3(0, 0.103f, transform.localPosition.z);
-            //transform.localScale = new Vector3(transform.localScale.x, 0.03f, transform.localScale.z);
         }
         else if (collider == colliders[2])
         {
             mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) + 20));
             if (mesh.GetBlendShapeWeight(0) == 100)
             {
-                currentForgeStage = Stage.Grind;
+                //currentForgeStage = Stage.Flatten;
                 canHarden = true;
-                foreach (Collider item in colliders)
-                {
-                    if (item.gameObject.activeSelf == true)
-                    {
-                        item.gameObject.SetActive(false);
-                    }
-                    else
-                    {
-                        item.gameObject.SetActive(true);
-                    }
-                }
+                nextModel.SetActive(true);
+                gameObject.SetActive(false);
             }
-            //transform.localPosition = new Vector3(0.103f, 0, transform.localPosition.z);
-            //transform.localScale = new Vector3(0.03f, transform.localScale.y, transform.localScale.z);
         }
         else if (collider == colliders[3])
         {
             mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) + 20));
             if (mesh.GetBlendShapeWeight(0) == 100)
             {
-                currentForgeStage = Stage.Grind;
+                //currentForgeStage = Stage.Flatten;
                 canHarden = true;
-                foreach (Collider item in colliders)
-                {
-                    if (item.gameObject.activeSelf == true)
-                    {
-                        item.gameObject.SetActive(false);
-                    }
-                    else
-                    {
-                        item.gameObject.SetActive(true);
-                    }
-                }
+                nextModel.SetActive(true);
+                gameObject.SetActive(false);
             }
-            //transform.localPosition = new Vector3(-0.103f, 0, transform.localPosition.z);
-            //transform.localScale = new Vector3(0.03f, transform.localScale.y, transform.localScale.z);
         }
     }
 
@@ -186,23 +162,35 @@ public class MaterialInteraction : MonoBehaviour
     {
         if (collider == colliders[0])
         {
-            transform.localPosition = new Vector3(transform.localPosition.x, -0.073f, transform.localPosition.z);
-            transform.localScale = new Vector3(transform.localScale.x, 0.1f, transform.localScale.z);
+            mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) + 20));
+            if (mesh.GetBlendShapeWeight(0) == 100)
+            {
+                //currentForgeStage = Stage.Flatten;
+                canHarden = true;
+            }
         }
         else if (collider == colliders[1])
         {
-            transform.localPosition = new Vector3(transform.localPosition.x, 0.073f, transform.localPosition.z);
-            transform.localScale = new Vector3(transform.localScale.x, 0.1f, transform.localScale.z);
+            mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) + 20));
+            if (mesh.GetBlendShapeWeight(0) == 100)
+            {
+                //currentForgeStage = Stage.Flatten;
+                canHarden = true;
+            }
         }
         else if (collider == colliders[2])
         {
-            transform.localPosition = new Vector3(0.075f, transform.localScale.y, transform.localPosition.z);
-            transform.localScale = new Vector3(transform.localScale.x, 0.1f, transform.localScale.z);
+            if (mesh.GetBlendShapeWeight(0) > 0)
+            {
+                mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) - 20));
+            }
         }
         else if (collider == colliders[3])
         {
-            transform.localPosition = new Vector3(0.075f, transform.localScale.y, transform.localPosition.z);
-            transform.localScale = new Vector3(0.1f, transform.localScale.y, transform.localScale.z);
+            if (mesh.GetBlendShapeWeight(0) > 0)
+            {
+                mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) - 20));
+            }
         }
     }
 
