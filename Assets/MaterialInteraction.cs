@@ -319,10 +319,11 @@ public class MaterialInteraction : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Fire")
         {
+            Debug.Log("Got Here");
             //cooling = false;
             heating = true;
         }
@@ -339,7 +340,7 @@ public class MaterialInteraction : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider collision)
     {
         if (collision.gameObject.tag == "Fire")
         {
