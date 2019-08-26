@@ -2585,7 +2585,7 @@ MonoBehaviour:
   - {fileID: 800153220}
   - {fileID: 939024718}
   - {fileID: 148857977}
-  anvil: {fileID: 6626533613596693600}
+  anvil: {fileID: 2079201374}
   HasGuard: 0
 --- !u!65 &1428965935
 BoxCollider:
@@ -3185,7 +3185,7 @@ MonoBehaviour:
   - {fileID: 278780614}
   - {fileID: 1999941054}
   - {fileID: 2142220418}
-  anvil: {fileID: 6626533613596693600}
+  anvil: {fileID: 2079201374}
   HasGuard: 0
 --- !u!137 &1705928845 stripped
 SkinnedMeshRenderer:
@@ -3669,6 +3669,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locked: 0
   markerActive: 1
+--- !u!1 &2079201374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3222165162379786875, guid: 702008478d9b8e340b031029db9284fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 2064315570}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2104175834
 GameObject:
   m_ObjectHideFlags: 0
