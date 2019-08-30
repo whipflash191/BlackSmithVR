@@ -195,7 +195,40 @@ public class MaterialInteraction : MonoBehaviour
 
     private void ForgeTip(Collider collider)
     {
-        //ToBeImplemented 
+        if (collider == colliders[0])
+        {
+            mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) + 20));
+            if (mesh.GetBlendShapeWeight(0) == 100)
+            {
+                nextModel.GetComponent<MaterialInteraction>().tempratureProgress = tempratureProgress;
+                nextModel.SetActive(true);
+                gameObject.SetActive(false);
+            }
+        }
+        else if (collider == colliders[1])
+        {
+            mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) + 20));
+            if (mesh.GetBlendShapeWeight(0) == 100)
+            {
+                nextModel.GetComponent<MaterialInteraction>().tempratureProgress = tempratureProgress;
+                nextModel.SetActive(true);
+                gameObject.SetActive(false);
+            }
+        }
+        else if (collider == colliders[2])
+        {
+            if (mesh.GetBlendShapeWeight(0) > 0)
+            {
+                mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) - 20));
+            }
+        }
+        else if (collider == colliders[3])
+        {
+            if (mesh.GetBlendShapeWeight(0) > 0)
+            {
+                mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) - 20));
+            }
+        }
     }
 
     private void ForgeTang(Collider collider)
@@ -242,13 +275,25 @@ public class MaterialInteraction : MonoBehaviour
 
     private void ForgeGrind(Collider collider)
     {
-        if (collider == colliders[4])
+        if (collider == colliders[0])
         {
             if (mesh.GetBlendShapeWeight(1) < 100)
             {
                 mesh.SetBlendShapeWeight(1, (mesh.GetBlendShapeWeight(1) + 5));
             }
-        } else if (collider == colliders[5])
+        } else if (collider == colliders[1])
+        {
+            if (mesh.GetBlendShapeWeight(1) < 100)
+            {
+                mesh.SetBlendShapeWeight(1, (mesh.GetBlendShapeWeight(1) + 5));
+            }
+        } else if (collider == colliders[2])
+        {
+            if (mesh.GetBlendShapeWeight(1) < 100)
+            {
+                mesh.SetBlendShapeWeight(1, (mesh.GetBlendShapeWeight(1) + 5));
+            }
+        } else if (collider == colliders[3])
         {
             if (mesh.GetBlendShapeWeight(1) < 100)
             {
