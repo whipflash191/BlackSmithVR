@@ -74,7 +74,7 @@ public class MaterialInteraction : MonoBehaviour
 
     private void FixedUpdate()
     {
-        FindFurestSideFromAnvil();
+       // FindFurestSideFromAnvil();
     }
 
     private void FindFurestSideFromAnvil()
@@ -275,27 +275,27 @@ public class MaterialInteraction : MonoBehaviour
     {
         if (collider == colliders[0])
         {
-            if (mesh.GetBlendShapeWeight(1) < 100)
+            if (mesh.GetBlendShapeWeight(0) < 100)
             {
-                mesh.SetBlendShapeWeight(1, (mesh.GetBlendShapeWeight(1) + 5));
+                mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) + 5));
             }
         } else if (collider == colliders[1])
         {
-            if (mesh.GetBlendShapeWeight(1) < 100)
+            if (mesh.GetBlendShapeWeight(0) < 100)
             {
-                mesh.SetBlendShapeWeight(1, (mesh.GetBlendShapeWeight(1) + 5));
+                mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) + 5));
             }
         } else if (collider == colliders[2])
         {
-            if (mesh.GetBlendShapeWeight(1) < 100)
+            if (mesh.GetBlendShapeWeight(0) < 100)
             {
-                mesh.SetBlendShapeWeight(1, (mesh.GetBlendShapeWeight(1) + 5));
+                mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) + 5));
             }
         } else if (collider == colliders[3])
         {
-            if (mesh.GetBlendShapeWeight(1) < 100)
+            if (mesh.GetBlendShapeWeight(0) < 100)
             {
-                mesh.SetBlendShapeWeight(1, (mesh.GetBlendShapeWeight(1) + 5));
+                mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) + 5));
             }
         }
 
@@ -383,6 +383,7 @@ public class MaterialInteraction : MonoBehaviour
             {
                 isHardened = true;
                 tempratureProgress = 0;
+                material.SetFloat("_HeatLerp", tempratureProgress);
             }
         }
     }
