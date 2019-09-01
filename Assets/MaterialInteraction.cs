@@ -19,16 +19,12 @@ public class MaterialInteraction : MonoBehaviour
     [Header("Heating")]
     public float heatTime;
     public float coolTime;
-    // public float heatingProgress = 0;
-    // public float coolingProgress = 0;
     public float tempratureProgress = 0;
     public float temp;
     public float currentTime;
     public bool heating = false;
-   // public bool cooling = false;
     public bool isHardened = false;
     public bool canHarden = false;
-    public bool debug = false;
 
     [Header("Forging")]
     public Transform GuardPos;
@@ -44,7 +40,6 @@ public class MaterialInteraction : MonoBehaviour
     void Start()
     {
         material = GetComponent<Renderer>().material;
-        currentForgeStage = Stage.Flatten;
     }
 
     // Update is called once per frame
@@ -54,8 +49,6 @@ public class MaterialInteraction : MonoBehaviour
         {
             if(tempratureProgress < 2)
             {
-                //currentTime += Time.deltaTime;
-                //heatingProgress = Mathf.Lerp(coolingProgress, 2, currentTime / heatTime);
                 tempratureProgress += Time.deltaTime * heatTime;
                 if(tempratureProgress > 2)
                 {
@@ -68,8 +61,6 @@ public class MaterialInteraction : MonoBehaviour
         {
             if(tempratureProgress > 0)
             {
-                // currentTime += Time.deltaTime;
-                // coolingProgress = Mathf.Lerp(heatingProgress, 0, currentTime / heatTime);
                 tempratureProgress -= Time.deltaTime * coolTime;
                 if(tempratureProgress < 0)
                 {
@@ -78,12 +69,6 @@ public class MaterialInteraction : MonoBehaviour
                 material.SetFloat("_HeatLerp", tempratureProgress);
                 temp = (tempratureProgress / 200) * 500;
             }
-        }
-
-        if(debug)
-        {
-           // coolingProgress = 2;
-           // material.SetFloat("_HeatLerp", coolingProgress);
         }
     }
 
@@ -94,7 +79,6 @@ public class MaterialInteraction : MonoBehaviour
 
     private void FindFurestSideFromAnvil()
     {
-
         farestDistance = 0;
 
         for (int i = 0; i < 4; i++)
@@ -139,6 +123,8 @@ public class MaterialInteraction : MonoBehaviour
             if (mesh.GetBlendShapeWeight(0) == 100)
             {
                 nextModel.GetComponent<MaterialInteraction>().tempratureProgress = tempratureProgress;
+                nextModel.transform.position = transform.position;
+                nextModel.transform.rotation = transform.rotation;
                 nextModel.SetActive(true);
                 gameObject.SetActive(false);
             }
@@ -149,6 +135,8 @@ public class MaterialInteraction : MonoBehaviour
             if (mesh.GetBlendShapeWeight(0) == 100)
             {
                 nextModel.GetComponent<MaterialInteraction>().tempratureProgress = tempratureProgress;
+                nextModel.transform.position = transform.position;
+                nextModel.transform.rotation = transform.rotation;
                 nextModel.SetActive(true);
                 gameObject.SetActive(false);
             }
@@ -163,6 +151,8 @@ public class MaterialInteraction : MonoBehaviour
             if (mesh.GetBlendShapeWeight(0) == 100)
             {
                 nextModel.GetComponent<MaterialInteraction>().tempratureProgress = tempratureProgress;
+                nextModel.transform.position = transform.position;
+                nextModel.transform.rotation = transform.rotation;
                 nextModel.SetActive(true);
                 gameObject.SetActive(false);
             }
@@ -173,6 +163,8 @@ public class MaterialInteraction : MonoBehaviour
             if (mesh.GetBlendShapeWeight(0) == 100)
             {
                 nextModel.GetComponent<MaterialInteraction>().tempratureProgress = tempratureProgress;
+                nextModel.transform.position = transform.position;
+                nextModel.transform.rotation = transform.rotation;
                 nextModel.SetActive(true);
                 gameObject.SetActive(false);
             }
@@ -201,6 +193,8 @@ public class MaterialInteraction : MonoBehaviour
             if (mesh.GetBlendShapeWeight(0) == 100)
             {
                 nextModel.GetComponent<MaterialInteraction>().tempratureProgress = tempratureProgress;
+                nextModel.transform.position = transform.position;
+                nextModel.transform.rotation = transform.rotation;
                 nextModel.SetActive(true);
                 gameObject.SetActive(false);
             }
@@ -211,6 +205,8 @@ public class MaterialInteraction : MonoBehaviour
             if (mesh.GetBlendShapeWeight(0) == 100)
             {
                 nextModel.GetComponent<MaterialInteraction>().tempratureProgress = tempratureProgress;
+                nextModel.transform.position = transform.position;
+                nextModel.transform.rotation = transform.rotation;
                 nextModel.SetActive(true);
                 gameObject.SetActive(false);
             }
@@ -240,7 +236,8 @@ public class MaterialInteraction : MonoBehaviour
             {
                 nextModel.GetComponent<MaterialInteraction>().canHarden = true;
                 nextModel.GetComponent<MaterialInteraction>().tempratureProgress = tempratureProgress;
-                canHarden = true;
+                nextModel.transform.position = transform.position;
+                nextModel.transform.rotation = transform.rotation;
                 nextModel.SetActive(true);
                 gameObject.SetActive(false);
             }
@@ -252,7 +249,8 @@ public class MaterialInteraction : MonoBehaviour
             {
                 nextModel.GetComponent<MaterialInteraction>().canHarden = true;
                 nextModel.GetComponent<MaterialInteraction>().tempratureProgress = tempratureProgress;
-                canHarden = true;
+                nextModel.transform.position = transform.position;
+                nextModel.transform.rotation = transform.rotation;
                 nextModel.SetActive(true);
                 gameObject.SetActive(false);
             }
@@ -347,7 +345,7 @@ public class MaterialInteraction : MonoBehaviour
 
     private void Snap(Collider collider)
     {
-        if (collider.tag == "Handle" && HasGuard && isTang)
+        if (collider.tag == "Handle" && HasGuard && isTang && isHardened)
         {
             Destroy(collider.gameObject.GetComponent<Throwable>());
             Destroy(collider.gameObject.GetComponent<Interactable>());
@@ -357,7 +355,7 @@ public class MaterialInteraction : MonoBehaviour
             collider.transform.position = HandlePos.transform.position;
             collider.transform.rotation = HandlePos.transform.rotation;
         }
-        else if (collider.tag == "Guard" && isTang)
+        else if (collider.tag == "Guard" && isTang && isHardened)
         {
             Debug.Log("Got Here");
             HasGuard = true;
@@ -365,9 +363,9 @@ public class MaterialInteraction : MonoBehaviour
             Destroy(collider.gameObject.GetComponent<Interactable>());
             Destroy(collider.gameObject.GetComponent<VelocityEstimator>());
             Destroy(collider.gameObject.GetComponent<Rigidbody>());
-            collider.transform.SetParent(transform.parent);
+            collider.transform.SetParent(transform);
             collider.transform.position = GuardPos.transform.position;
-            collider.transform.rotation = transform.parent.rotation;
+            collider.transform.rotation = GuardPos.transform.rotation;
         }
     }
 
@@ -375,12 +373,12 @@ public class MaterialInteraction : MonoBehaviour
     {
         if (collision.gameObject.tag == "Fire")
         {
-            Debug.Log("Got Here");
             heating = true;
         }
 
         if (collision.gameObject.tag == "Quench")
         {
+            Debug.Log("Got Here");
             if (canHarden == true && tempratureProgress > 1)
             {
                 isHardened = true;
