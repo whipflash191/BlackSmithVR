@@ -94,8 +94,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
-    m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -192,7 +192,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -525,7 +524,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -932,26 +930,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 0}
   currentForgeStage: 1
   mesh: {fileID: 103656436}
   nextModel: {fileID: 1025647300}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 0
-  GuardPos: {fileID: 0}
-  HandlePos: {fileID: 0}
-  isTang: 0
   colliders:
   - {fileID: 271352240}
   - {fileID: 1181778473}
   - {fileID: 1322041371}
   - {fileID: 1481915226}
   anvil: {fileID: 317763805}
+  GuardPos: {fileID: 0}
+  HandlePos: {fileID: 0}
+  isTang: 0
   HasGuard: 0
 --- !u!114 &103656438
 MonoBehaviour:
@@ -1204,7 +1199,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &193739905
 GameObject:
@@ -2199,20 +2194,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 0}
   currentForgeStage: 4
   mesh: {fileID: 319667144}
   nextModel: {fileID: 0}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 1
-  GuardPos: {fileID: 427027958}
-  HandlePos: {fileID: 0}
-  isTang: 1
   colliders:
   - {fileID: 1981690381}
   - {fileID: 574472147}
@@ -2221,6 +2210,9 @@ MonoBehaviour:
   - {fileID: 319667149}
   - {fileID: 319667150}
   anvil: {fileID: 480654912}
+  GuardPos: {fileID: 427027958}
+  HandlePos: {fileID: 0}
+  isTang: 1
   HasGuard: 0
 --- !u!65 &319667149
 BoxCollider:
@@ -2716,20 +2708,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 0}
   currentForgeStage: 4
   mesh: {fileID: 390361241}
   nextModel: {fileID: 0}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 1
-  GuardPos: {fileID: 1570802017}
-  HandlePos: {fileID: 0}
-  isTang: 1
   colliders:
   - {fileID: 239523062}
   - {fileID: 1142427551}
@@ -2738,6 +2724,9 @@ MonoBehaviour:
   - {fileID: 390361246}
   - {fileID: 390361247}
   anvil: {fileID: 480654912}
+  GuardPos: {fileID: 1570802017}
+  HandlePos: {fileID: 0}
+  isTang: 1
   HasGuard: 0
 --- !u!65 &390361246
 BoxCollider:
@@ -4322,26 +4311,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 0}
   currentForgeStage: 2
   mesh: {fileID: 695978528}
   nextModel: {fileID: 1883573809}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 0
-  GuardPos: {fileID: 0}
-  HandlePos: {fileID: 0}
-  isTang: 0
   colliders:
   - {fileID: 1502377196}
   - {fileID: 1304224959}
   - {fileID: 1980274450}
   - {fileID: 1691157244}
   anvil: {fileID: 317763805}
+  GuardPos: {fileID: 0}
+  HandlePos: {fileID: 0}
+  isTang: 0
   HasGuard: 0
 --- !u!65 &695978533
 BoxCollider:
@@ -5223,7 +5209,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -5515,20 +5500,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
   currentForgeStage: 4
   mesh: {fileID: 829083817}
   nextModel: {fileID: 0}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 1
-  GuardPos: {fileID: 2021733315}
-  HandlePos: {fileID: 0}
-  isTang: 1
   colliders:
   - {fileID: 1492155748}
   - {fileID: 496233560}
@@ -5537,6 +5516,9 @@ MonoBehaviour:
   - {fileID: 829083820}
   - {fileID: 829083819}
   anvil: {fileID: 480654912}
+  GuardPos: {fileID: 2021733315}
+  HandlePos: {fileID: 0}
+  isTang: 1
   HasGuard: 0
 --- !u!65 &829083819
 BoxCollider:
@@ -6675,26 +6657,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 0}
   currentForgeStage: 3
   mesh: {fileID: 1009141214}
   nextModel: {fileID: 390361240}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 0
-  GuardPos: {fileID: 0}
-  HandlePos: {fileID: 0}
-  isTang: 0
   colliders:
   - {fileID: 1702419341}
   - {fileID: 278001244}
   - {fileID: 280323335}
   - {fileID: 467439950}
   anvil: {fileID: 317763805}
+  GuardPos: {fileID: 0}
+  HandlePos: {fileID: 0}
+  isTang: 0
   HasGuard: 0
 --- !u!114 &1009141216
 MonoBehaviour:
@@ -7140,26 +7119,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 0}
   currentForgeStage: 2
   mesh: {fileID: 1025647301}
   nextModel: {fileID: 2009108188}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 0
-  GuardPos: {fileID: 0}
-  HandlePos: {fileID: 0}
-  isTang: 0
   colliders:
   - {fileID: 48647492}
   - {fileID: 925918848}
   - {fileID: 1910327537}
   - {fileID: 1133579547}
   anvil: {fileID: 317763805}
+  GuardPos: {fileID: 0}
+  HandlePos: {fileID: 0}
+  isTang: 0
   HasGuard: 0
 --- !u!65 &1025647306
 BoxCollider:
@@ -8359,26 +8335,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 0}
   currentForgeStage: 0
   mesh: {fileID: 1336239911}
   nextModel: {fileID: 103656435}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 0
-  GuardPos: {fileID: 0}
-  HandlePos: {fileID: 0}
-  isTang: 0
   colliders:
   - {fileID: 1508880937}
   - {fileID: 50971297}
   - {fileID: 1610186184}
   - {fileID: 1363873118}
   anvil: {fileID: 317763805}
+  GuardPos: {fileID: 0}
+  HandlePos: {fileID: 0}
+  isTang: 0
   HasGuard: 0
 --- !u!65 &1336239916
 BoxCollider:
@@ -8782,26 +8755,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 0}
   currentForgeStage: 2
   mesh: {fileID: 1372727257}
   nextModel: {fileID: 1009141213}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 0
-  GuardPos: {fileID: 0}
-  HandlePos: {fileID: 0}
-  isTang: 0
   colliders:
   - {fileID: 1044053351}
   - {fileID: 614964292}
   - {fileID: 1531372175}
   - {fileID: 1450298966}
   anvil: {fileID: 317763805}
+  GuardPos: {fileID: 0}
+  HandlePos: {fileID: 0}
+  isTang: 0
   HasGuard: 0
 --- !u!65 &1372727262
 BoxCollider:
@@ -9205,20 +9175,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 0}
   currentForgeStage: 4
   mesh: {fileID: 1396261633}
   nextModel: {fileID: 0}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 1
-  GuardPos: {fileID: 933130276}
-  HandlePos: {fileID: 0}
-  isTang: 1
   colliders:
   - {fileID: 1095149233}
   - {fileID: 1584158818}
@@ -9227,6 +9191,9 @@ MonoBehaviour:
   - {fileID: 1396261638}
   - {fileID: 1396261639}
   anvil: {fileID: 480654912}
+  GuardPos: {fileID: 933130276}
+  HandlePos: {fileID: 0}
+  isTang: 1
   HasGuard: 0
 --- !u!65 &1396261638
 BoxCollider:
@@ -9626,26 +9593,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
   currentForgeStage: 0
   mesh: {fileID: 1428965933}
   nextModel: {fileID: 1705928837}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 0
-  GuardPos: {fileID: 0}
-  HandlePos: {fileID: 0}
-  isTang: 0
   colliders:
   - {fileID: 1494015578}
   - {fileID: 1387728163}
   - {fileID: 725507089}
   - {fileID: 800153220}
   anvil: {fileID: 317763805}
+  GuardPos: {fileID: 0}
+  HandlePos: {fileID: 0}
+  isTang: 0
   HasGuard: 0
 --- !u!65 &1428965935
 BoxCollider:
@@ -10451,26 +10415,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 0}
   currentForgeStage: 0
   mesh: {fileID: 1510765747}
   nextModel: {fileID: 2144119174}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 0
-  GuardPos: {fileID: 0}
-  HandlePos: {fileID: 0}
-  isTang: 0
   colliders:
   - {fileID: 594727578}
   - {fileID: 309274994}
   - {fileID: 336686766}
   - {fileID: 484088838}
   anvil: {fileID: 317763805}
+  GuardPos: {fileID: 0}
+  HandlePos: {fileID: 0}
+  isTang: 0
   HasGuard: 0
 --- !u!65 &1510765752
 BoxCollider:
@@ -11128,26 +11089,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 0}
   currentForgeStage: 2
   mesh: {fileID: 1592000140}
   nextModel: {fileID: 2142098557}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 0
-  GuardPos: {fileID: 0}
-  HandlePos: {fileID: 0}
-  isTang: 0
   colliders:
   - {fileID: 30294065}
   - {fileID: 1739246604}
   - {fileID: 459147949}
   - {fileID: 29013049}
   anvil: {fileID: 317763805}
+  GuardPos: {fileID: 0}
+  HandlePos: {fileID: 0}
+  isTang: 0
   HasGuard: 0
 --- !u!65 &1592000145
 BoxCollider:
@@ -11492,20 +11450,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 0}
   currentForgeStage: 4
   mesh: {fileID: 1617889199}
   nextModel: {fileID: 0}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 1
-  GuardPos: {fileID: 996533679}
-  HandlePos: {fileID: 0}
-  isTang: 1
   colliders:
   - {fileID: 1569591955}
   - {fileID: 803206658}
@@ -11514,6 +11466,9 @@ MonoBehaviour:
   - {fileID: 1617889204}
   - {fileID: 1617889205}
   anvil: {fileID: 480654912}
+  GuardPos: {fileID: 996533679}
+  HandlePos: {fileID: 0}
+  isTang: 1
   HasGuard: 0
 --- !u!65 &1617889204
 BoxCollider:
@@ -11711,26 +11666,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
   currentForgeStage: 2
   mesh: {fileID: 1646067343}
   nextModel: {fileID: 1829263708}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 0
-  GuardPos: {fileID: 0}
-  HandlePos: {fileID: 0}
-  isTang: 0
   colliders:
   - {fileID: 195895679}
   - {fileID: 193739908}
   - {fileID: 103725241}
   - {fileID: 1220416364}
   anvil: {fileID: 317763805}
+  GuardPos: {fileID: 0}
+  HandlePos: {fileID: 0}
+  isTang: 0
   HasGuard: 0
 --- !u!65 &1646067345
 BoxCollider:
@@ -12274,26 +12226,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
   currentForgeStage: 1
   mesh: {fileID: 1705928845}
   nextModel: {fileID: 1646067342}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 0
-  GuardPos: {fileID: 0}
-  HandlePos: {fileID: 0}
-  isTang: 0
   colliders:
   - {fileID: 339905124}
   - {fileID: 278780614}
   - {fileID: 1999941054}
   - {fileID: 2142220418}
   anvil: {fileID: 317763805}
+  GuardPos: {fileID: 0}
+  HandlePos: {fileID: 0}
+  isTang: 0
   HasGuard: 0
 --- !u!137 &1705928845 stripped
 SkinnedMeshRenderer:
@@ -12628,26 +12577,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 0}
   currentForgeStage: 0
   mesh: {fileID: 1751316781}
   nextModel: {fileID: 2096742514}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 0
-  GuardPos: {fileID: 0}
-  HandlePos: {fileID: 0}
-  isTang: 0
   colliders:
   - {fileID: 640724338}
   - {fileID: 294159880}
   - {fileID: 661721478}
   - {fileID: 2125210188}
   anvil: {fileID: 317763805}
+  GuardPos: {fileID: 0}
+  HandlePos: {fileID: 0}
+  isTang: 0
   HasGuard: 0
 --- !u!65 &1751316786
 BoxCollider:
@@ -13051,26 +12997,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 0}
   currentForgeStage: 0
   mesh: {fileID: 1776057790}
   nextModel: {fileID: 2103179458}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 0
-  GuardPos: {fileID: 0}
-  HandlePos: {fileID: 0}
-  isTang: 0
   colliders:
   - {fileID: 1123483489}
   - {fileID: 282847192}
   - {fileID: 556640689}
   - {fileID: 824447875}
   anvil: {fileID: 317763805}
+  GuardPos: {fileID: 0}
+  HandlePos: {fileID: 0}
+  isTang: 0
   HasGuard: 0
 --- !u!65 &1776057795
 BoxCollider:
@@ -13385,26 +13328,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
   currentForgeStage: 3
   mesh: {fileID: 1829263709}
   nextModel: {fileID: 829083816}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 0
-  GuardPos: {fileID: 0}
-  HandlePos: {fileID: 0}
-  isTang: 0
   colliders:
   - {fileID: 781923674}
   - {fileID: 1983978164}
   - {fileID: 1765484513}
   - {fileID: 1007551690}
   anvil: {fileID: 317763805}
+  GuardPos: {fileID: 0}
+  HandlePos: {fileID: 0}
+  isTang: 0
   HasGuard: 0
 --- !u!1001 &1883573807
 PrefabInstance:
@@ -13560,26 +13500,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 0}
   currentForgeStage: 3
   mesh: {fileID: 1883573810}
   nextModel: {fileID: 1396261632}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 0
-  GuardPos: {fileID: 0}
-  HandlePos: {fileID: 0}
-  isTang: 0
   colliders:
   - {fileID: 928071978}
   - {fileID: 2123525294}
   - {fileID: 1388667451}
   - {fileID: 580457604}
   anvil: {fileID: 317763805}
+  GuardPos: {fileID: 0}
+  HandlePos: {fileID: 0}
+  isTang: 0
   HasGuard: 0
 --- !u!114 &1883573812
 MonoBehaviour:
@@ -13921,7 +13858,7 @@ Transform:
   - {fileID: 1829263707}
   - {fileID: 829083815}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1941376687
 GameObject:
@@ -14070,7 +14007,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -14540,26 +14476,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 0}
   currentForgeStage: 3
   mesh: {fileID: 2009108189}
   nextModel: {fileID: 1617889198}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 0
-  GuardPos: {fileID: 0}
-  HandlePos: {fileID: 0}
-  isTang: 0
   colliders:
   - {fileID: 898498740}
   - {fileID: 615657777}
   - {fileID: 1999311589}
   - {fileID: 1428957701}
   anvil: {fileID: 317763805}
+  GuardPos: {fileID: 0}
+  HandlePos: {fileID: 0}
+  isTang: 0
   HasGuard: 0
 --- !u!114 &2009108191
 MonoBehaviour:
@@ -14945,26 +14878,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 0}
   currentForgeStage: 1
   mesh: {fileID: 2096742515}
   nextModel: {fileID: 1592000139}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 0
-  GuardPos: {fileID: 0}
-  HandlePos: {fileID: 0}
-  isTang: 0
   colliders:
   - {fileID: 999569274}
   - {fileID: 804514936}
   - {fileID: 1149984187}
   - {fileID: 770125622}
   anvil: {fileID: 317763805}
+  GuardPos: {fileID: 0}
+  HandlePos: {fileID: 0}
+  isTang: 0
   HasGuard: 0
 --- !u!114 &2096742517
 MonoBehaviour:
@@ -15255,26 +15185,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 0}
   currentForgeStage: 1
   mesh: {fileID: 2103179459}
   nextModel: {fileID: 1372727256}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 0
-  GuardPos: {fileID: 0}
-  HandlePos: {fileID: 0}
-  isTang: 0
   colliders:
   - {fileID: 2038135036}
   - {fileID: 1354780630}
   - {fileID: 641835958}
   - {fileID: 1018653489}
   anvil: {fileID: 317763805}
+  GuardPos: {fileID: 0}
+  HandlePos: {fileID: 0}
+  isTang: 0
   HasGuard: 0
 --- !u!114 &2103179461
 MonoBehaviour:
@@ -15713,26 +15640,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 0}
   currentForgeStage: 3
   mesh: {fileID: 2142098558}
   nextModel: {fileID: 319667143}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 0
-  GuardPos: {fileID: 0}
-  HandlePos: {fileID: 0}
-  isTang: 0
   colliders:
   - {fileID: 1919696991}
   - {fileID: 979072298}
   - {fileID: 308750157}
   - {fileID: 809940917}
   anvil: {fileID: 317763805}
+  GuardPos: {fileID: 0}
+  HandlePos: {fileID: 0}
+  isTang: 0
   HasGuard: 0
 --- !u!114 &2142098560
 MonoBehaviour:
@@ -16082,26 +16006,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  partMaterial: {fileID: 0}
   currentForgeStage: 1
   mesh: {fileID: 2144119175}
   nextModel: {fileID: 695978527}
-  heatTime: 1
-  coolTime: 0.15
   tempratureProgress: 0
-  temp: 0
   currentTime: 0
   heating: 0
   isHardened: 0
-  canHarden: 0
-  GuardPos: {fileID: 0}
-  HandlePos: {fileID: 0}
-  isTang: 0
   colliders:
   - {fileID: 1096146958}
   - {fileID: 1941376690}
   - {fileID: 1158727510}
   - {fileID: 1697024207}
   anvil: {fileID: 317763805}
+  GuardPos: {fileID: 0}
+  HandlePos: {fileID: 0}
+  isTang: 0
   HasGuard: 0
 --- !u!114 &2144119177
 MonoBehaviour:
