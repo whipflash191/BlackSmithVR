@@ -24,7 +24,7 @@ public class MaterialInteraction : MonoBehaviour
     public bool isHardened = false;
 
     [Header("Forging")]
-    Forging forge;
+    Forging forge = new Forging();
     public List<Collider> colliders = new List<Collider>();
     public GameObject anvil;
     Collider furtherestFromAnvil = null;
