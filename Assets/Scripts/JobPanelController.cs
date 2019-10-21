@@ -67,4 +67,24 @@ public class JobPanelController : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public void RemoveJobPlayer()
+    {
+        if (job != null)
+        {
+            if (PlayerManager.instance.playerJobList.Contains(job))
+            {
+                PlayerManager.instance.playerJobList.Remove(job);
+            }
+        }
+        job = null;
+        UpdatePanel();
+        gameObject.SetActive(false);
+    }
+
+    public void PlayerHandIn()
+    {
+
+    }
+
+
 }
