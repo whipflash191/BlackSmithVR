@@ -13,7 +13,7 @@ public class JobItem : ScriptableObject
     public string clientName = null;
     public string jobName = null;
     public string jobDescription = null;
-    public Sprite jobImage = null;
+    public Sprite jobIcon = null;
     public float Reward = 0;
     public List<string> requireItems = new List<string>();
 }

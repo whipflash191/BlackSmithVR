@@ -7,7 +7,7 @@ public class PlayerManager : MonoBehaviour
     public List<JobItem> playerJobList = new List<JobItem>();
     public static PlayerManager instance;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         instance = this;
     }

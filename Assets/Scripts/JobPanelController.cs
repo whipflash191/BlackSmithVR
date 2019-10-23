@@ -35,7 +35,7 @@ public class JobPanelController : MonoBehaviour
             rewardDescription.SetText("");
         } else
         {
-            jobImage.sprite = job.jobImage;
+            jobImage.sprite = job.jobIcon;
             jobImage.color = Color.white;
             jobName.SetText(job.jobName);
             jobDescription.SetText(job.jobDescription);

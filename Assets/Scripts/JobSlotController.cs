@@ -31,7 +31,7 @@ public class JobSlotController : MonoBehaviour
         } else
         {
             jobName.SetText(job.jobName);
-            jobImage.sprite = job.jobImage;
+            jobImage.sprite = job.jobIcon;
             jobImage.color = Color.white;
         }
     }
