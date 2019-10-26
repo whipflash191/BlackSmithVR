@@ -11,6 +11,7 @@ using Valve.VR.InteractionSystem;
 public class MaterialInteraction : MonoBehaviour
 {
     public ScriptableMaterial partMaterial;
+    public string weaponType = "";
     public enum Stage {Flatten, Lengthen, Tip, Tang, Grind};
     public Stage currentForgeStage;
     Material material;
@@ -137,6 +138,7 @@ public class MaterialInteraction : MonoBehaviour
             collider.transform.SetParent(transform.parent);
             collider.transform.position = HandlePos.transform.position;
             collider.transform.rotation = HandlePos.transform.rotation;
+            gameObject.tag = weaponType;
         }
         else if (collider.tag == "Guard" && isTang && isHardened)
         {
