@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b352b457031734aa14f97d659591dc, type: 3}
   m_Name: Job 6-Narrows
   m_EditorClassIdentifier: 
-  clientName: 
-  jobName: 
-  jobDescription: 
-  jobIcon: {fileID: 0}
-  Reward: 0
-  requireItems: []
+  clientName: Rummel
+  jobName: Maroon Sword
+  jobDescription: I require a red coated sword for the Mrs.
+  jobIcon: {fileID: 21300000, guid: 014aefb2a964d784196b0ddae2d44862, type: 3}
+  Reward: 10
+  requireItems: [Narrows]
