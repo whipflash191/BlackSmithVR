@@ -39,6 +39,7 @@ public class PlayerHandInZone : MonoBehaviour
                     PlayerManager.instance.playerJobList.Remove(currentJob);
                     PlayerManager.instance.money += currentJob.Reward;
                     currentJob = null;
+                    currentJob = null;
                 }
             }
 
