@@ -18,5 +18,4 @@ MonoBehaviour:
     execution performances. Create your best.
   jobIcon: {fileID: 21300000, guid: 014aefb2a964d784196b0ddae2d44862, type: 3}
   Reward: 100
-  requireItems:
-  - Sanghelios
+  requireItems: [Sanghelios]

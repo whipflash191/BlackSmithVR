@@ -18,5 +18,4 @@ MonoBehaviour:
     don't dissapoint.
   jobIcon: {fileID: 21300000, guid: 08cc55fdf5cef444a8e5483db12499d5, type: 3}
   Reward: 10
-  requireItems:
-  - Valhalla
+  requireItems: [Valhalla]

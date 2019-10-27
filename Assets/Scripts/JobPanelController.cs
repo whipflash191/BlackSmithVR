@@ -79,11 +79,19 @@ public class JobPanelController : MonoBehaviour
         job = null;
         UpdatePanel();
         gameObject.SetActive(false);
+        PlayerHandInZone.instance.isActive = false;
+        if(PlayerHandInZone.instance.currentJob != null)
+        {
+            PlayerHandInZone.instance.currentJob = null;
+            PlayerHandInZone.instance.activeParticle.Stop();
+        }
     }
 
     public void PlayerHandIn()
     {
-
+        PlayerHandInZone.instance.isActive = true;
+        PlayerHandInZone.instance.currentJob = job;
+        PlayerHandInZone.instance.activeParticle.Play();
     }
 
 
