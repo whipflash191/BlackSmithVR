@@ -41,7 +41,10 @@ public class PlayerJobSystem : MonoBehaviour
 
     public void RemoveJob(JobItem job)
     {
-        PlayerManager.instance.playerJobList.Remove(job);
+        if (PlayerManager.instance.playerJobList.Contains(job))
+        {
+            PlayerManager.instance.playerJobList.Remove(job);
+        }
         updateJobSlots();
     }
 }
