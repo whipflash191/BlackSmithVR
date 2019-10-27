@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59b352b457031734aa14f97d659591dc, type: 3}
-  m_Name: Job 1
+  m_Name: Job 1-Avalanche
   m_EditorClassIdentifier: 
   clientName: Steve
-  jobName: Need a Hammer
-  jobDescription: 
-  jobIcon: {fileID: 0}
+  jobName: Need a Strong Axe-Urgently
+  jobDescription: Greetings, I require a sturdy and firm axe for wood cutting. I believe
+    you can assist me.
+  jobIcon: {fileID: 21300000, guid: 08cc55fdf5cef444a8e5483db12499d5, type: 3}
   Reward: 10
   requireItems:
-  - 'Name '
+  - Avalanche
