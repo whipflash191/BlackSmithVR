@@ -8,6 +8,7 @@ public class PlayerHandInZone : MonoBehaviour
     public static PlayerHandInZone instance;
     public bool isActive = false;
     public ParticleSystem activeParticle;
+    public JobPanelController playerJobDisplay;
     // Start is called before the first frame update
     void Awake()
     {
@@ -36,10 +37,9 @@ public class PlayerHandInZone : MonoBehaviour
                 {
                     isActive = false;
                     activeParticle.Stop();
-                    PlayerManager.instance.playerJobList.Remove(currentJob);
                     PlayerManager.instance.money += currentJob.Reward;
-                    currentJob = null;
-                    currentJob = null;
+                    playerJobDisplay.RemoveJobPlayer();
+                    Destroy(other.gameObject);
                 }
             }
 

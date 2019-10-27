@@ -46,5 +46,6 @@ public class PlayerJobSystem : MonoBehaviour
             PlayerManager.instance.playerJobList.Remove(job);
         }
         updateJobSlots();
+        
     }
 }

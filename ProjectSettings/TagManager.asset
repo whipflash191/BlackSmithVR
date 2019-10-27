@@ -13,6 +13,9 @@ TagManager:
   - Handle
   - Quench
   - GrindWheel
+  - Sanghelios
+  - Valhalla
+  - Orbital
   layers:
   - Default
   - TransparentFX

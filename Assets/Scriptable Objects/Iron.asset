@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57fc3dc8aa23dd94183076131c04fa5e, type: 3}
   m_Name: Iron
   m_EditorClassIdentifier: 
-  heatTime: 0
-  coolTime: 0
+  heatTime: 0.5
+  coolTime: 0.1
   hitTempMin: 1
   hitTempMax: 2
   needsHardening: 1
