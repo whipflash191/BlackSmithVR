@@ -50,6 +50,10 @@ public class JobPanelController : MonoBehaviour
         {
             PlayerManager.instance.playerJobList.Add(job);
             JobSystem.instance.RemoveJob(job);
+            PlayerJobSystem.instance.updateJobSlots();
+            job = null;
+            UpdatePanel();
+            gameObject.SetActive(false);
         }
     }
     public void RemoveJob()
@@ -71,10 +75,7 @@ public class JobPanelController : MonoBehaviour
     {
         if (job != null)
         {
-            if (PlayerManager.instance.playerJobList.Contains(job))
-            {
-                PlayerManager.instance.playerJobList.Remove(job);
-            }
+            PlayerJobSystem.instance.RemoveJob(job);
         }
         job = null;
         UpdatePanel();
