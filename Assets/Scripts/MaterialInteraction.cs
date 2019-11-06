@@ -37,6 +37,7 @@ public class MaterialInteraction : MonoBehaviour
     public bool isTang = false;
     public bool HasGuard = false;
 
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -102,6 +103,8 @@ public class MaterialInteraction : MonoBehaviour
 
     private void Forge(Collider collider)
     {
+        AudioManager.instance.AnvilHit(collider); //Should bee on a seperate event manager but meeh
+
         if (tempratureProgress > partMaterial.hitTempMin && isHardened == false)
         {
             if (currentForgeStage == Stage.Flatten)
