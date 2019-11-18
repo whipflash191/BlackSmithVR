@@ -28,15 +28,16 @@ public class PlayerShopSystem : MonoBehaviour
         foreach (Transform child in shopSystemPanel.transform)
         {
             ShopSlotController instance = child.GetComponent<ShopSlotController>();
-            if (index < availableItems.Count && availableItems.Count != 0)
+            if (index < availableItems.Count && instance != null)
             {
                 instance.item = availableItems[index];
+                instance.UpdateInfo();
             }
-            else
+            else if (instance != null)
             {
                 instance.item = null;
+                instance.UpdateInfo();
             }
-            instance.UpdateInfo();
             index++;
         }
     }
