@@ -9,6 +9,8 @@ public class PlayerHandInZone : MonoBehaviour
     public bool isActive = false;
     public ParticleSystem activeParticle;
     public JobPanelController playerJobDisplay;
+    public GameObject portalOrigin;
+    public Transform[] path;
     // Start is called before the first frame update
     void Awake()
     {
@@ -26,6 +28,12 @@ public class PlayerHandInZone : MonoBehaviour
     {
         if(isActive)
         {
+            if (other.GetComponent<Valve.VR.InteractionSystem.Interactable>())
+            {
+                other.GetComponent<Rigidbody>().useGravity = false;
+                iTween.MoveTo(other.gameObject, iTween.Hash("position", portalOrigin.transform.position, "easeType", "easeOutCirc", "time", 4, "path", path));
+            }
+
             if(currentJob != null)
             {
                 foreach (string requiredItem in currentJob.requireItems)
@@ -45,4 +53,5 @@ public class PlayerHandInZone : MonoBehaviour
 
         }
     }
+
 }
