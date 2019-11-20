@@ -4705,7 +4705,7 @@ MonoBehaviour:
   thisCollider: {fileID: 226347142}
   distFromTarget: {x: 0, y: 0, z: 0}
   onAnvil: 0
-  myOppositeSide: {fileID: 0}
+  myOppositeSide: {fileID: 2143830689}
 --- !u!65 &226347142
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5665,7 +5665,7 @@ MonoBehaviour:
   releaseVelocityStyle: 1
   releaseVelocityTimeOffset: -0.011
   scaleReleaseVelocity: 1.1
-  restoreOriginalParent: 0
+  restoreOriginalParent: 1
   onPickUp:
     m_PersistentCalls:
       m_Calls: []
@@ -5701,11 +5701,11 @@ MonoBehaviour:
   nextModel: {fileID: 878596396}
   tempratureProgress: 0
   currentTime: 0
-  heating: 0
+  heating: 1
   isHardened: 0
   colliders:
-  - {fileID: 2143830690}
   - {fileID: 226347142}
+  - {fileID: 2143830690}
   - {fileID: 961481095}
   - {fileID: 1886128471}
   anvil: {fileID: 317763805}
@@ -11360,7 +11360,7 @@ MonoBehaviour:
   thisCollider: {fileID: 526914270}
   distFromTarget: {x: 0, y: 0, z: 0}
   onAnvil: 0
-  myOppositeSide: {fileID: 0}
+  myOppositeSide: {fileID: 991584578}
 --- !u!65 &526914270
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15720,7 +15720,7 @@ MonoBehaviour:
   releaseVelocityStyle: 1
   releaseVelocityTimeOffset: -0.011
   scaleReleaseVelocity: 1.1
-  restoreOriginalParent: 0
+  restoreOriginalParent: 1
   onPickUp:
     m_PersistentCalls:
       m_Calls: []
@@ -16334,7 +16334,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f04590a445b814c4489476d12c4ed51c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0831687
+      value: 1.676
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f04590a445b814c4489476d12c4ed51c,
         type: 3}
@@ -16344,7 +16344,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f04590a445b814c4489476d12c4ed51c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.139
+      value: -2.452
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f04590a445b814c4489476d12c4ed51c,
         type: 3}
@@ -17284,7 +17284,7 @@ MonoBehaviour:
   releaseVelocityStyle: 1
   releaseVelocityTimeOffset: -0.011
   scaleReleaseVelocity: 1.1
-  restoreOriginalParent: 0
+  restoreOriginalParent: 1
   onPickUp:
     m_PersistentCalls:
       m_Calls: []
@@ -18103,7 +18103,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 3e5c584593c63e34189be500617a23ef,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0831687
+      value: -0.079
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 3e5c584593c63e34189be500617a23ef,
         type: 3}
@@ -18113,22 +18113,22 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 3e5c584593c63e34189be500617a23ef,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.139
+      value: 0.191
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 3e5c584593c63e34189be500617a23ef,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 3e5c584593c63e34189be500617a23ef,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 3e5c584593c63e34189be500617a23ef,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 3e5c584593c63e34189be500617a23ef,
         type: 3}
@@ -19470,7 +19470,7 @@ MonoBehaviour:
   thisCollider: {fileID: 961481095}
   distFromTarget: {x: 0, y: 0, z: 0}
   onAnvil: 0
-  myOppositeSide: {fileID: 0}
+  myOppositeSide: {fileID: 1886128470}
 --- !u!65 &961481095
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20127,7 +20127,7 @@ MonoBehaviour:
   thisCollider: {fileID: 991584579}
   distFromTarget: {x: 0, y: 0, z: 0}
   onAnvil: 0
-  myOppositeSide: {fileID: 0}
+  myOppositeSide: {fileID: 526914269}
 --- !u!65 &991584579
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22552,13 +22552,13 @@ MonoBehaviour:
   nextModel: {fileID: 266624780}
   tempratureProgress: 0
   currentTime: 0
-  heating: 0
+  heating: 1
   isHardened: 0
   colliders:
-  - {fileID: 526914270}
-  - {fileID: 991584579}
   - {fileID: 1802182113}
   - {fileID: 1331002803}
+  - {fileID: 526914270}
+  - {fileID: 991584579}
   anvil: {fileID: 317763805}
   GuardPos: {fileID: 0}
   HandlePos: {fileID: 0}
@@ -22648,7 +22648,7 @@ MonoBehaviour:
   releaseVelocityStyle: 1
   releaseVelocityTimeOffset: -0.011
   scaleReleaseVelocity: 1.1
-  restoreOriginalParent: 0
+  restoreOriginalParent: 1
   onPickUp:
     m_PersistentCalls:
       m_Calls: []
@@ -24765,7 +24765,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156941296}
   m_LocalRotation: {x: -0, y: 0.7154808, z: -0, w: 0.6986324}
-  m_LocalPosition: {x: 3.5979998, y: 0.293, z: 9.212}
+  m_LocalPosition: {x: -0.092, y: 0.556, z: 7.483}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1083578300}
@@ -28304,7 +28304,7 @@ MonoBehaviour:
   releaseVelocityStyle: 1
   releaseVelocityTimeOffset: -0.011
   scaleReleaseVelocity: 1.1
-  restoreOriginalParent: 0
+  restoreOriginalParent: 1
   onPickUp:
     m_PersistentCalls:
       m_Calls: []
@@ -28907,7 +28907,7 @@ MonoBehaviour:
   thisCollider: {fileID: 1331002803}
   distFromTarget: {x: 0, y: 0, z: 0}
   onAnvil: 0
-  myOppositeSide: {fileID: 0}
+  myOppositeSide: {fileID: 1802182112}
 --- !u!65 &1331002803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37025,7 +37025,7 @@ MonoBehaviour:
   thisCollider: {fileID: 1802182113}
   distFromTarget: {x: 0, y: 0, z: 0}
   onAnvil: 0
-  myOppositeSide: {fileID: 0}
+  myOppositeSide: {fileID: 1331002802}
 --- !u!65 &1802182113
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38085,7 +38085,7 @@ MonoBehaviour:
   thisCollider: {fileID: 1886128471}
   distFromTarget: {x: 0, y: 0, z: 0}
   onAnvil: 0
-  myOppositeSide: {fileID: 0}
+  myOppositeSide: {fileID: 961481094}
 --- !u!65 &1886128471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47125,7 +47125,7 @@ MonoBehaviour:
   thisCollider: {fileID: 2143830690}
   distFromTarget: {x: 0, y: 0, z: 0}
   onAnvil: 0
-  myOppositeSide: {fileID: 0}
+  myOppositeSide: {fileID: 226347141}
 --- !u!65 &2143830690
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47150,6 +47150,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnvrionmentModels
+      objectReference: {fileID: 0}
+    - target: {fileID: 475211278295883426, guid: 602387ee8b81a3d40b2a7808e2aef3d4,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 9.606561
+      objectReference: {fileID: 0}
+    - target: {fileID: 475211278295883426, guid: 602387ee8b81a3d40b2a7808e2aef3d4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.9464
+      objectReference: {fileID: 0}
+    - target: {fileID: 475211278295883426, guid: 602387ee8b81a3d40b2a7808e2aef3d4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.10803
+      objectReference: {fileID: 0}
+    - target: {fileID: 475211278295883426, guid: 602387ee8b81a3d40b2a7808e2aef3d4,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.5673575
       objectReference: {fileID: 0}
     - target: {fileID: 1922650152374287944, guid: 602387ee8b81a3d40b2a7808e2aef3d4,
         type: 3}
@@ -47471,6 +47491,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7deca59b6eaf18a4697b71df9cc3ac1e, type: 2}
+    - target: {fileID: 6955343022949271477, guid: 602387ee8b81a3d40b2a7808e2aef3d4,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2064315572, guid: 602387ee8b81a3d40b2a7808e2aef3d4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 602387ee8b81a3d40b2a7808e2aef3d4, type: 3}

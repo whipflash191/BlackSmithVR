@@ -50,6 +50,7 @@ public class Forging
     {
         if (collider == colliders[0])
         {
+            Debug.Log("collider 0");
             mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) + 20));
             if (mesh.GetBlendShapeWeight(0) == 100)
             {
@@ -62,6 +63,8 @@ public class Forging
         }
         else if (collider == colliders[1])
         {
+            Debug.Log("collider 1");
+
             mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) + 20));
             if (mesh.GetBlendShapeWeight(0) == 100)
             {
@@ -74,6 +77,7 @@ public class Forging
         }
         else if (collider == colliders[2])
         {
+            Debug.Log("collider 3");
             if (mesh.GetBlendShapeWeight(0) > 0)
             {
                 mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) - 20));
@@ -81,6 +85,7 @@ public class Forging
         }
         else if (collider == colliders[3])
         {
+            Debug.Log("collider 4");
             if (mesh.GetBlendShapeWeight(0) > 0)
             {
                 mesh.SetBlendShapeWeight(0, (mesh.GetBlendShapeWeight(0) - 20));

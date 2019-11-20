@@ -18,9 +18,9 @@ public class IngotCollidePoints : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+      
     }
 
     private void OnTriggerEnter(Collider collider)
@@ -28,6 +28,7 @@ public class IngotCollidePoints : MonoBehaviour
         if (collider.tag == "Anvil")
         {
             onAnvil = true;
+            
         }
         if (collider.tag == "Hammer" && myOppositeSide.onAnvil == true)
         {
@@ -45,6 +46,7 @@ public class IngotCollidePoints : MonoBehaviour
         if (collider.tag == "Anvil")
         {
             onAnvil = false;
+           
         }
     }
     private void OnTriggerStay(Collider collider)

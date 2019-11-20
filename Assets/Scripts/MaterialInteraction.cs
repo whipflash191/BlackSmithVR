@@ -74,7 +74,24 @@ public class MaterialInteraction : MonoBehaviour
 
     private void FixedUpdate()
     {
+        int notTouchingCount = 0;
        // FindFurestSideFromAnvil();
+       for(int i = 0; i < colliders.Count; i++)
+        {
+            if(colliders[i].GetComponent<IngotCollidePoints>())
+            {
+                if (colliders[i].GetComponent<IngotCollidePoints>().onAnvil)
+                {
+                    transform.GetComponent<Rigidbody>().isKinematic = true;
+                    break;
+                }
+                else notTouchingCount++;
+            }
+            if(notTouchingCount == colliders.Count)
+            {
+                transform.GetComponent<Rigidbody>().isKinematic = false;
+            }
+        }
     }
 
     private void FindFurestSideFromAnvil()
@@ -109,10 +126,12 @@ public class MaterialInteraction : MonoBehaviour
         {
             if (currentForgeStage == Stage.Flatten)
             {
-                    forge.ForgeFlatten(collider, colliders, mesh, tempratureProgress, gameObject, nextModel);
+                print("Flattening");
+                forge.ForgeFlatten(collider, colliders, mesh, tempratureProgress, gameObject, nextModel);
             }
             else if (currentForgeStage == Stage.Lengthen)
             {
+                print("Lengthening");
                 forge.ForgeLengthen(collider, colliders, mesh, tempratureProgress, gameObject, nextModel);
             }
             else if (currentForgeStage == Stage.Tip)
