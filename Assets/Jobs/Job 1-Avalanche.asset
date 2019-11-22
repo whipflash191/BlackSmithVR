@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Job 1-Avalanche
   m_EditorClassIdentifier: 
   clientName: Steve
-  jobName: Need a Strong Axe-Urgently
+  jobName: Avalanche
   jobDescription: Greetings, I require a sturdy and firm axe for wood cutting. I believe
     you can assist me.
   jobIcon: {fileID: 21300000, guid: 08cc55fdf5cef444a8e5483db12499d5, type: 3}

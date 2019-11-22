@@ -9,6 +9,7 @@ public class JobSlotController : MonoBehaviour
     public GameObject jobPanel;
     public JobItem job;
     public TextMeshProUGUI jobName;
+    public TextMeshProUGUI clientName;
     public Image jobImage;
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,7 @@ public class JobSlotController : MonoBehaviour
         } else
         {
             jobName.SetText(job.jobName);
+            clientName.SetText(job.clientName);
             jobImage.sprite = job.jobIcon;
             jobImage.color = Color.white;
         }
