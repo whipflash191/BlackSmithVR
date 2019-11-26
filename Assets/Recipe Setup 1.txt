@@ -1,0 +1,5 @@
+Setting Up A New Weapon Recipe: 
+1. Right Click in Weapon Recipe
+2. "Create -> Job System -> Weapon Recipe" 
+3. Attach Prefabs for each component to the recipe scriptable object
+4. Name The Recipe in the name slot

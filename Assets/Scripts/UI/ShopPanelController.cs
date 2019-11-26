@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+* Copyright (c) Dylan Faith (Whipflash191)
+* https://twitter.com/Whipflash191
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +16,7 @@ public class ShopPanelController : MonoBehaviour
     public TextMeshProUGUI itemName;
     public TextMeshProUGUI itemDescription;
     public TextMeshProUGUI cost;
+    public Transform itemSpawnPoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +44,10 @@ public class ShopPanelController : MonoBehaviour
 
     public void PlayerPurchase()
     {
-
+        if(PlayerManager.instance.money > item.cost)
+        {
+            Instantiate(item.itemToInstantiate, itemSpawnPoint.position, item.itemToInstantiate.transform.rotation);
+            PlayerManager.instance.money -= item.cost;
+        }
     }
 }

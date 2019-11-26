@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+* Copyright (c) Dylan Faith (Whipflash191)
+* https://twitter.com/Whipflash191
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -36,12 +41,21 @@ public class PlayerHandInZone : MonoBehaviour
 
             if(currentJob != null)
             {
-                foreach (string requiredItem in currentJob.requireItems)
+                foreach (WeaponItem requiredItem in currentJob.requiredItems)
                 {
-                    currentJob.requireItems.Remove(requiredItem);
+                    if (requiredItem.weaponBlade.GetComponent<MaterialInteraction>().bladeName == other.gameObject.GetComponent<MaterialInteraction>().bladeName)
+                    {
+                        if(requiredItem.weaponHandle.GetComponent<PartIdentifier>().isHandle && requiredItem.weaponHandle.GetComponent<PartIdentifier>().handleName == other.gameObject.GetComponent<PartIdentifier>().handleName)
+                        {
+                            if (requiredItem.weaponHandle.GetComponent<PartIdentifier>().isPommel && requiredItem.weaponHandle.GetComponent<PartIdentifier>().pommelName == other.gameObject.GetComponent<PartIdentifier>().pommelName)
+                            {
+                                currentJob.requiredItems.Remove(requiredItem);
+                            }
+                        } 
+                    }
                 }
 
-                if(currentJob.requireItems.Count <= 0)
+                if(currentJob.requiredItems.Count <= 0)
                 {
                     isActive = false;
                     activeParticle.Stop();

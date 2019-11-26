@@ -1,0 +1,20 @@
+Setting Up A New Weapon Recipe: 
+1. Right Click in Weapon Recipe
+2. "Create -> Job System -> Weapon Recipe" 
+3. Attach Prefabs for each component to the recipe scriptable object
+4. Name The Recipe in the name slot
+
+Setting Up New Part Prefabs: 
+
+For Blades/Attack Sections
+1. Attach Material Interaction Script
+2. Attach Material Prefab
+3. Assign Blade Section of Material Interaction to self
+4. Name the Blade Part
+5. Setup Blends
+
+For Handles/Pommels
+1. Setup Snap System
+2. Attach Part Identifier Script
+3. Tick for Pommel or Handle
+4. Name Part
