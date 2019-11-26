@@ -1340,7 +1340,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 3
   mesh: {fileID: 49945076}
   nextModel: {fileID: 822930160}
@@ -2571,7 +2574,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 4
   mesh: {fileID: 102818453}
   nextModel: {fileID: 0}
@@ -4859,7 +4865,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 1
   mesh: {fileID: 239240935}
   nextModel: {fileID: 891151739}
@@ -5163,7 +5172,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 3
   mesh: {fileID: 240871161}
   nextModel: {fileID: 847783526}
@@ -5521,7 +5533,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 1
   mesh: {fileID: 266624789}
   nextModel: {fileID: 878596396}
@@ -6611,7 +6626,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 1
   mesh: {fileID: 305940467}
   nextModel: {fileID: 1572595974}
@@ -6906,7 +6924,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 2
   mesh: {fileID: 318050138}
   nextModel: {fileID: 1318983094}
@@ -8531,7 +8552,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 0
   mesh: {fileID: 409412237}
   nextModel: {fileID: 239240926}
@@ -8722,6 +8746,7 @@ MonoBehaviour:
   itemName: {fileID: 1642606272}
   itemDescription: {fileID: 655851492}
   cost: {fileID: 636055698}
+  itemSpawnPoint: {fileID: 0}
 --- !u!114 &410163438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9371,7 +9396,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 2
   mesh: {fileID: 451393704}
   nextModel: {fileID: 49945068}
@@ -13502,7 +13530,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 4
   mesh: {fileID: 688184414}
   nextModel: {fileID: 0}
@@ -14990,7 +15021,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 4
   mesh: {fileID: 822930168}
   nextModel: {fileID: 0}
@@ -15576,7 +15610,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 3
   mesh: {fileID: 836425796}
   nextModel: {fileID: 1302718486}
@@ -15947,7 +15984,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 4
   mesh: {fileID: 847783527}
   nextModel: {fileID: 0}
@@ -16822,7 +16862,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 2
   mesh: {fileID: 878596405}
   nextModel: {fileID: 836425787}
@@ -17166,7 +17209,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 2
   mesh: {fileID: 891151748}
   nextModel: {fileID: 1934665441}
@@ -18191,7 +18237,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 3
   mesh: {fileID: 916684172}
   nextModel: {fileID: 2103779825}
@@ -18868,7 +18917,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 0
   mesh: {fileID: 955563740}
   nextModel: {fileID: 1502082206}
@@ -20181,7 +20233,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 0
   mesh: {fileID: 998514273}
   nextModel: {fileID: 1750438848}
@@ -21512,7 +21567,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 0
   mesh: {fileID: 1083578308}
   nextModel: {fileID: 266624780}
@@ -22974,7 +23032,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 2
   mesh: {fileID: 1128364565}
   nextModel: {fileID: 240871160}
@@ -26329,7 +26390,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 0
   mesh: {fileID: 1268287520}
   nextModel: {fileID: 1396583670}
@@ -26982,7 +27046,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 4
   mesh: {fileID: 1302718496}
   nextModel: {fileID: 0}
@@ -27297,7 +27364,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 3
   mesh: {fileID: 1318983095}
   nextModel: {fileID: 2132146858}
@@ -28158,7 +28228,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 0
   mesh: {fileID: 1346269862}
   nextModel: {fileID: 1478828092}
@@ -29039,7 +29112,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 1
   mesh: {fileID: 1396583671}
   nextModel: {fileID: 1128364564}
@@ -29846,7 +29922,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 1
   mesh: {fileID: 1478828101}
   nextModel: {fileID: 1714468534}
@@ -30025,7 +30104,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 3
   mesh: {fileID: 1479882311}
   nextModel: {fileID: 102818444}
@@ -30409,7 +30491,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 1
   mesh: {fileID: 1502082214}
   nextModel: {fileID: 451393696}
@@ -31945,7 +32030,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 2
   mesh: {fileID: 1572595983}
   nextModel: {fileID: 916684163}
@@ -33854,8 +33942,8 @@ MonoBehaviour:
   onHandClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 410163436}
-        m_MethodName: 
+      - m_Target: {fileID: 410163437}
+        m_MethodName: PlayerPurchase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -34212,7 +34300,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 2
   mesh: {fileID: 1714468543}
   nextModel: {fileID: 1479882302}
@@ -35001,7 +35092,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 1
   mesh: {fileID: 1750438849}
   nextModel: {fileID: 318050137}
@@ -36314,7 +36408,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 0
   mesh: {fileID: 1844047018}
   nextModel: {fileID: 305940458}
@@ -38044,7 +38141,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 3
   mesh: {fileID: 1934665450}
   nextModel: {fileID: 688184404}
@@ -45512,7 +45612,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 4
   mesh: {fileID: 2103779835}
   nextModel: {fileID: 0}
@@ -45800,7 +45903,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponType: 
+  weaponBlade: {fileID: 0}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: 
   currentForgeStage: 4
   mesh: {fileID: 2132146859}
   nextModel: {fileID: 0}
