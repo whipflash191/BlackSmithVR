@@ -36,11 +36,9 @@ public class MaterialInteraction : MonoBehaviour
 
     [Header("Weapon Construction")]
     public Transform GuardPos;
-    public Transform HandlePos;
     public bool isTang = false;
     public bool HasGuard = false;
 
-   
     // Start is called before the first frame update
     void Start()
     {
@@ -162,35 +160,12 @@ public class MaterialInteraction : MonoBehaviour
         }
     }
 
-    private void Snap(Collider collider)
+    private void Snap(GameObject objToSnapTo, Transform snapPoint)
     {
-        if (collider.tag == "Handle" && HasGuard && isTang && isHardened)
-        {
-            Destroy(collider.gameObject.GetComponent<Throwable>());
-            Destroy(collider.gameObject.GetComponent<Interactable>());
-            Destroy(collider.gameObject.GetComponent<VelocityEstimator>());
-            Destroy(collider.gameObject.GetComponent<Rigidbody>());
-            collider.transform.SetParent(transform.parent);
-            collider.transform.position = HandlePos.transform.position;
-            collider.transform.rotation = HandlePos.transform.rotation;
-            weaponPommel = collider.gameObject;
-        }
-        else if (collider.tag == "Guard" && isTang && isHardened)
-        {
-            Debug.Log("Got Here");
-            HasGuard = true;
-            Destroy(collider.gameObject.GetComponent<Throwable>());
-            Destroy(collider.gameObject.GetComponent<Interactable>());
-            Destroy(collider.gameObject.GetComponent<VelocityEstimator>());
-            Destroy(collider.gameObject.GetComponent<Rigidbody>());
-            collider.transform.SetParent(transform);
-            collider.transform.position = GuardPos.transform.position;
-            collider.transform.rotation = GuardPos.transform.rotation;
-            weaponHandle = collider.gameObject;
-        }
+
     }
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Fire")
         {
@@ -209,7 +184,7 @@ public class MaterialInteraction : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider collision)
+    private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.tag == "Fire")
         {
