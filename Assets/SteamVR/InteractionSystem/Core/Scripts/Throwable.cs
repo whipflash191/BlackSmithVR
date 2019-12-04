@@ -250,7 +250,11 @@ namespace Valve.VR.InteractionSystem
 			gameObject.SetActive( false );
 			velocityEstimator.FinishEstimatingVelocity();
 		}
-	}
+        public void DirtyPhysicsHelper()
+        {
+            GetComponent<Rigidbody>().isKinematic = false;
+        }
+    }
 
     public enum ReleaseStyle
     {
@@ -259,4 +263,6 @@ namespace Valve.VR.InteractionSystem
         ShortEstimation,
         AdvancedEstimation,
     }
+
+    
 }
