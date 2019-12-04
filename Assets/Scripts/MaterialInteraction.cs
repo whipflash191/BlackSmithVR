@@ -121,32 +121,42 @@ public class MaterialInteraction : MonoBehaviour
 
     private void Forge(Collider collider)
     {
-        AudioManager.instance.AnvilHit(collider); //Should bee on a seperate event manager but meeh
+         //Should bee on a seperate event manager but meeh
 
         if (tempratureProgress > partMaterial.hitTempMin && isHardened == false)
         {
             if (currentForgeStage == Stage.Flatten)
             {
+                FXManager.instance.AnvilHit(collider);
                 print("Flattening");
                 forge.ForgeFlatten(collider, colliders, mesh, tempratureProgress, gameObject, nextModel);
             }
             else if (currentForgeStage == Stage.Lengthen)
             {
+                FXManager.instance.AnvilHit(collider);
                 print("Lengthening");
                 forge.ForgeLengthen(collider, colliders, mesh, tempratureProgress, gameObject, nextModel);
             }
             else if (currentForgeStage == Stage.Tip)
             {
+                FXManager.instance.AnvilHit(collider);
                 forge.ForgeTip(collider, colliders, mesh, tempratureProgress, gameObject, nextModel);
             }
             else if (currentForgeStage == Stage.Tang)
             {
+                FXManager.instance.AnvilHit(collider);
                 forge.ForgeTang(collider, colliders, mesh, tempratureProgress, gameObject, nextModel);
             }
         }
         else if (currentForgeStage == Stage.Grind && isHardened == true)
         {
+            FXManager.instance.AnvilHit(collider);
             forge.ForgeGrind(collider, colliders, mesh, tempratureProgress, gameObject, nextModel);
+        }
+        else
+        {
+            //Bad hit
+            FXManager.instance.AnvilBadHit(collider);
         }
     }
 
@@ -155,7 +165,7 @@ public class MaterialInteraction : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Fire")
         {
@@ -174,7 +184,7 @@ public class MaterialInteraction : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider collision)
+    private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.tag == "Fire")
         {

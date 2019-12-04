@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.blacksmithtest.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "E:\\Documents\\Unity Games\\BlacksmithTest\\actions.json",
+      "action_manifest_path": "C:\\Users\\TrentMDS\\source\\repos\\BlackSmithVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "BlacksmithTest [Testing]"
