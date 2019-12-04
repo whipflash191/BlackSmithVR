@@ -15,5 +15,5 @@ public class JobItem : ScriptableObject
     public string jobDescription = null;
     public Sprite jobIcon = null;
     public float Reward = 0;
-    public List<string> requireItems = new List<string>();
+    public List<WeaponItem> requiredItems = new List<WeaponItem>();
 }
