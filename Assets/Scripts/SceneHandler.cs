@@ -36,6 +36,10 @@ public class SceneHandler : MonoBehaviour
         {
             InputModule.instance.Submit(e.target.gameObject);
         }
+        else 
+        {
+            InputModule.instance.Submit(e.target.gameObject);
+        }
     }
 
     public void PointerInside(object sender, PointerEventArgs e)
@@ -56,6 +60,10 @@ public class SceneHandler : MonoBehaviour
         {
             InputModule.instance.HoverBegin(e.target.gameObject);
         }
+        else
+        {
+            InputModule.instance.HoverBegin(e.target.gameObject);
+        }
     }
 
     public void PointerOutside(object sender, PointerEventArgs e)
@@ -73,6 +81,10 @@ public class SceneHandler : MonoBehaviour
             InputModule.instance.HoverEnd(e.target.gameObject);
         }
         else if (e.target.name == "Shop Button")
+        {
+            InputModule.instance.HoverEnd(e.target.gameObject);
+        }
+        else 
         {
             InputModule.instance.HoverEnd(e.target.gameObject);
         }
