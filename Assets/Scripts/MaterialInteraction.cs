@@ -85,14 +85,14 @@ public class MaterialInteraction : MonoBehaviour
             {
                 if (colliders[i].GetComponent<IngotCollidePoints>().onAnvil)
                 {
-                    transform.GetComponent<Rigidbody>().isKinematic = true;
+                    transform.parent.GetComponent<Rigidbody>().isKinematic = true;
                     break;
                 }
                 else notTouchingCount++;
             }
             if(notTouchingCount == colliders.Count)
             {
-                transform.GetComponent<Rigidbody>().isKinematic = false;
+                transform.parent.GetComponent<Rigidbody>().isKinematic = false;
             }
         }
     }
