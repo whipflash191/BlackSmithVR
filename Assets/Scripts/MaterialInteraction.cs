@@ -155,7 +155,7 @@ public class MaterialInteraction : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Fire")
         {
@@ -174,7 +174,7 @@ public class MaterialInteraction : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider collision)
+    private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.tag == "Fire")
         {
