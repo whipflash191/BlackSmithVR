@@ -46,7 +46,6 @@ public class IngotCollidePoints : MonoBehaviour
         if (collider.tag == "Anvil")
         {
             onAnvil = false;
-           
         }
     }
     private void OnTriggerStay(Collider collider)
