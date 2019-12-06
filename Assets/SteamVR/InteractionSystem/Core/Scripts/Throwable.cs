@@ -250,18 +250,7 @@ namespace Valve.VR.InteractionSystem
 			gameObject.SetActive( false );
 			velocityEstimator.FinishEstimatingVelocity();
 		}
-        public void DirtyPhysicsHelper()
-        {
-            GetComponent<Rigidbody>().isKinematic = false;
-        }
-        public void DirtyPickupHelper()
-        {
-            //bandaid
-            if(isAnvilObject)
-            {
-                
-            }
-        }
+       
     }
 
     public enum ReleaseStyle

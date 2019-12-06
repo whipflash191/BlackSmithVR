@@ -75,6 +75,7 @@ public class MaterialInteraction : MonoBehaviour
 
     private void FixedUpdate()
     {
+        /*
         int notTouchingCount = 0;
        // FindFurestSideFromAnvil();
        for(int i = 0; i < colliders.Count; i++)
@@ -93,6 +94,7 @@ public class MaterialInteraction : MonoBehaviour
                 transform.parent.GetComponent<Rigidbody>().isKinematic = false;
             }
         }
+        */
     }
 
     private void FindFurestSideFromAnvil()
