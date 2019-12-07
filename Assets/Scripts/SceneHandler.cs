@@ -17,7 +17,7 @@ public class SceneHandler : MonoBehaviour
         laserPointer.PointerOut += PointerOutside;
         laserPointer.PointerClick += PointerClick;
     }
-
+    
     public void PointerClick(object sender, PointerEventArgs e)
     {
         if (e.target.name == "Job")
@@ -29,6 +29,14 @@ public class SceneHandler : MonoBehaviour
             InputModule.instance.Submit(e.target.gameObject);
         }
         else if (e.target.name == "Decline")
+        {
+            InputModule.instance.Submit(e.target.gameObject);
+        }
+        else if (e.target.name == "Shop Button")
+        {
+            InputModule.instance.Submit(e.target.gameObject);
+        }
+        else 
         {
             InputModule.instance.Submit(e.target.gameObject);
         }
@@ -48,6 +56,14 @@ public class SceneHandler : MonoBehaviour
         {
             InputModule.instance.HoverBegin(e.target.gameObject);
         }
+        else if (e.target.name == "Shop Button")
+        {
+            InputModule.instance.HoverBegin(e.target.gameObject);
+        }
+        else
+        {
+            InputModule.instance.HoverBegin(e.target.gameObject);
+        }
     }
 
     public void PointerOutside(object sender, PointerEventArgs e)
@@ -61,6 +77,14 @@ public class SceneHandler : MonoBehaviour
             InputModule.instance.HoverEnd(e.target.gameObject);
         }
         else if (e.target.name == "Decline")
+        {
+            InputModule.instance.HoverEnd(e.target.gameObject);
+        }
+        else if (e.target.name == "Shop Button")
+        {
+            InputModule.instance.HoverEnd(e.target.gameObject);
+        }
+        else 
         {
             InputModule.instance.HoverEnd(e.target.gameObject);
         }

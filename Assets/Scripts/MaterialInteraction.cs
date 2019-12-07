@@ -36,11 +36,9 @@ public class MaterialInteraction : MonoBehaviour
 
     [Header("Weapon Construction")]
     public Transform GuardPos;
-    public Transform HandlePos;
     public bool isTang = false;
     public bool HasGuard = false;
 
-   
     // Start is called before the first frame update
     void Start()
     {
@@ -77,6 +75,7 @@ public class MaterialInteraction : MonoBehaviour
 
     private void FixedUpdate()
     {
+        /*
         int notTouchingCount = 0;
        // FindFurestSideFromAnvil();
        for(int i = 0; i < colliders.Count; i++)
@@ -85,16 +84,17 @@ public class MaterialInteraction : MonoBehaviour
             {
                 if (colliders[i].GetComponent<IngotCollidePoints>().onAnvil)
                 {
-                    transform.GetComponent<Rigidbody>().isKinematic = true;
+                    transform.parent.GetComponent<Rigidbody>().isKinematic = true;
                     break;
                 }
                 else notTouchingCount++;
             }
             if(notTouchingCount == colliders.Count)
             {
-                transform.GetComponent<Rigidbody>().isKinematic = false;
+                transform.parent.GetComponent<Rigidbody>().isKinematic = false;
             }
         }
+        */
     }
 
     private void FindFurestSideFromAnvil()
@@ -123,65 +123,53 @@ public class MaterialInteraction : MonoBehaviour
 
     private void Forge(Collider collider)
     {
-        AudioManager.instance.AnvilHit(collider); //Should bee on a seperate event manager but meeh
+         //Should bee on a seperate event manager but meeh
 
         if (tempratureProgress > partMaterial.hitTempMin && isHardened == false)
         {
             if (currentForgeStage == Stage.Flatten)
             {
+                FXManager.instance.AnvilHit(collider);
                 print("Flattening");
                 forge.ForgeFlatten(collider, colliders, mesh, tempratureProgress, gameObject, nextModel);
             }
             else if (currentForgeStage == Stage.Lengthen)
             {
+                FXManager.instance.AnvilHit(collider);
                 print("Lengthening");
                 forge.ForgeLengthen(collider, colliders, mesh, tempratureProgress, gameObject, nextModel);
             }
             else if (currentForgeStage == Stage.Tip)
             {
+                FXManager.instance.AnvilHit(collider);
                 forge.ForgeTip(collider, colliders, mesh, tempratureProgress, gameObject, nextModel);
             }
             else if (currentForgeStage == Stage.Tang)
             {
+                FXManager.instance.AnvilHit(collider);
                 forge.ForgeTang(collider, colliders, mesh, tempratureProgress, gameObject, nextModel);
             }
         }
         else if (currentForgeStage == Stage.Grind && isHardened == true)
         {
+            FXManager.instance.AnvilHit(collider);
             forge.ForgeGrind(collider, colliders, mesh, tempratureProgress, gameObject, nextModel);
         }
-    }
-
-    private void Snap(Collider collider)
-    {
-        if (collider.tag == "Handle" && HasGuard && isTang && isHardened)
+        else
         {
-            Destroy(collider.gameObject.GetComponent<Throwable>());
-            Destroy(collider.gameObject.GetComponent<Interactable>());
-            Destroy(collider.gameObject.GetComponent<VelocityEstimator>());
-            Destroy(collider.gameObject.GetComponent<Rigidbody>());
-            collider.transform.SetParent(transform.parent);
-            collider.transform.position = HandlePos.transform.position;
-            collider.transform.rotation = HandlePos.transform.rotation;
-            weaponPommel = collider.gameObject;
-        }
-        else if (collider.tag == "Guard" && isTang && isHardened)
-        {
-            Debug.Log("Got Here");
-            HasGuard = true;
-            Destroy(collider.gameObject.GetComponent<Throwable>());
-            Destroy(collider.gameObject.GetComponent<Interactable>());
-            Destroy(collider.gameObject.GetComponent<VelocityEstimator>());
-            Destroy(collider.gameObject.GetComponent<Rigidbody>());
-            collider.transform.SetParent(transform);
-            collider.transform.position = GuardPos.transform.position;
-            collider.transform.rotation = GuardPos.transform.rotation;
-            weaponHandle = collider.gameObject;
+            //Bad hit
+            FXManager.instance.AnvilBadHit(collider);
         }
     }
 
-    private void OnTriggerEnter(Collider collision)
+    private void Snap(GameObject objToSnapTo, Transform snapPoint)
     {
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("collision");
         if (collision.gameObject.tag == "Fire")
         {
             heating = true;
@@ -199,7 +187,7 @@ public class MaterialInteraction : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider collision)
+    private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.tag == "Fire")
         {

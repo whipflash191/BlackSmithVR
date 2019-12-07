@@ -35,7 +35,7 @@ namespace Valve.VR.InteractionSystem
 
 		[Tooltip( "When detaching the object, should it return to its original parent?" )]
 		public bool restoreOriginalParent = false;
-
+        public bool isAnvilObject;
         
 
 		protected VelocityEstimator velocityEstimator;
@@ -250,7 +250,8 @@ namespace Valve.VR.InteractionSystem
 			gameObject.SetActive( false );
 			velocityEstimator.FinishEstimatingVelocity();
 		}
-	}
+       
+    }
 
     public enum ReleaseStyle
     {
@@ -259,4 +260,6 @@ namespace Valve.VR.InteractionSystem
         ShortEstimation,
         AdvancedEstimation,
     }
+
+    
 }

@@ -36,7 +36,7 @@ public class IngotCollidePoints : MonoBehaviour
         }
         else if (collider.tag == "Guard" || collider.tag == "Handle")
         {
-            Metal.SendMessage("Snap", collider);
+            //Metal.SendMessage("Snap", collider);
         }
 
     }
@@ -46,7 +46,6 @@ public class IngotCollidePoints : MonoBehaviour
         if (collider.tag == "Anvil")
         {
             onAnvil = false;
-           
         }
     }
     private void OnTriggerStay(Collider collider)
