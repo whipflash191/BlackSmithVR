@@ -33,7 +33,6 @@ public class IngotCollidePoints : MonoBehaviour
         }
         if (collider.tag == "Hammer" && myOppositeSide.onAnvil == true)
         {
-            Debug.Log("Working");
             Metal.SendMessage("Forge", thisCollider);
         }
         else if (collider.tag == "Guard" || collider.tag == "Handle")

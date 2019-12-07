@@ -10,7 +10,8 @@ public class TestSnapper : MonoBehaviour
     public Transform snapPoint1;
     public Transform snapPoint2;
 
-    bool isSnapped;
+    bool isSnapped = false;
+    bool hasPommel = false;
     public bool isHandle;
     public bool isPommel;
     
@@ -57,9 +58,10 @@ public class TestSnapper : MonoBehaviour
         {
             SnapToObject(collision.collider.gameObject);
             collision.collider.gameObject.GetComponent<MaterialInteraction>().weaponHandle = gameObject;
-        } else if (isPommel && handleTest != null && handleTest.isSnapped == true)
+        } else if (isPommel && handleTest != null && handleTest.isSnapped == true && handleTest.hasPommel == false)
         {
             SnapToObject(collision.collider.gameObject);
+            handleTest.hasPommel = true;
             collision.collider.gameObject.transform.parent.GetComponent<MaterialInteraction>().weaponPommel = gameObject;
         }
     }

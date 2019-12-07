@@ -43,6 +43,7 @@ public class MaterialInteraction : MonoBehaviour
     void Start()
     {
         material = GetComponent<Renderer>().material;
+        anvil = GameObject.FindGameObjectWithTag("anvil");
     }
 
     // Update is called once per frame
@@ -75,26 +76,7 @@ public class MaterialInteraction : MonoBehaviour
 
     private void FixedUpdate()
     {
-        /*
-        int notTouchingCount = 0;
-       // FindFurestSideFromAnvil();
-       for(int i = 0; i < colliders.Count; i++)
-        {
-            if(colliders[i].GetComponent<IngotCollidePoints>())
-            {
-                if (colliders[i].GetComponent<IngotCollidePoints>().onAnvil)
-                {
-                    transform.parent.GetComponent<Rigidbody>().isKinematic = true;
-                    break;
-                }
-                else notTouchingCount++;
-            }
-            if(notTouchingCount == colliders.Count)
-            {
-                transform.parent.GetComponent<Rigidbody>().isKinematic = false;
-            }
-        }
-        */
+
     }
 
     private void FindFurestSideFromAnvil()
@@ -194,31 +176,4 @@ public class MaterialInteraction : MonoBehaviour
             heating = false;
         }
     }
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    Debug.Log("collision");
-    //    if (collision.gameObject.tag == "Fire")
-    //    {
-    //        heating = true;
-    //    }
-
-    //    if (collision.gameObject.tag == "Quench")
-    //    {
-    //        Debug.Log("Got Here");
-    //        if (partMaterial.needsHardening == true && tempratureProgress > partMaterial.hitTempMin)
-    //        {
-    //            isHardened = true;
-    //            tempratureProgress = 0;
-    //            material.SetFloat("_HeatLerp", tempratureProgress);
-    //        }
-    //    }
-    //}
-
-    //private void OnCollisionExit(Collision collision)
-    //{
-    //    if (collision.gameObject.tag == "Fire")
-    //    {
-    //        heating = false;
-    //    }
-    //}
 }

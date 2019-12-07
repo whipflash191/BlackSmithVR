@@ -92,7 +92,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7392894485788335006}
-  m_LocalRotation: {x: -0, y: 0.776463, z: -0, w: -0.6301629}
+  m_LocalRotation: {x: 0, y: 0.7764645, z: -0, w: -0.6301609}
   m_LocalPosition: {x: 3.6, y: 0.306, z: 7.723}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -196,6 +196,7 @@ MonoBehaviour:
   releaseVelocityTimeOffset: -0.011
   scaleReleaseVelocity: 1.1
   restoreOriginalParent: 0
+  isAnvilObject: 0
   onPickUp:
     m_PersistentCalls:
       m_Calls: []
@@ -306,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 048b1600f9dde7e4a874c2816aa206d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snapPoint1: {fileID: 150565807792099904}
-  snapPoint2: {fileID: 5849004850266310683}
+  snapPoint1: {fileID: 5849004850266310683}
+  snapPoint2: {fileID: 150565807792099904}
   isHandle: 1
   isPommel: 0
