@@ -167,7 +167,7 @@ public class MaterialInteraction : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void CollisionStart(Collision collision)
     {
         Debug.Log("collision");
         if (collision.gameObject.tag == "Fire")
@@ -187,11 +187,38 @@ public class MaterialInteraction : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    public void CollisionStop(Collision collision)
     {
         if (collision.gameObject.tag == "Fire")
         {
             heating = false;
         }
     }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    Debug.Log("collision");
+    //    if (collision.gameObject.tag == "Fire")
+    //    {
+    //        heating = true;
+    //    }
+
+    //    if (collision.gameObject.tag == "Quench")
+    //    {
+    //        Debug.Log("Got Here");
+    //        if (partMaterial.needsHardening == true && tempratureProgress > partMaterial.hitTempMin)
+    //        {
+    //            isHardened = true;
+    //            tempratureProgress = 0;
+    //            material.SetFloat("_HeatLerp", tempratureProgress);
+    //        }
+    //    }
+    //}
+
+    //private void OnCollisionExit(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "Fire")
+    //    {
+    //        heating = false;
+    //    }
+    //}
 }

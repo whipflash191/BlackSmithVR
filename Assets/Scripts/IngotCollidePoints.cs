@@ -25,6 +25,7 @@ public class IngotCollidePoints : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
+        
         if (collider.tag == "Anvil")
         {
             onAnvil = true;
@@ -32,6 +33,7 @@ public class IngotCollidePoints : MonoBehaviour
         }
         if (collider.tag == "Hammer" && myOppositeSide.onAnvil == true)
         {
+            Debug.Log("Working");
             Metal.SendMessage("Forge", thisCollider);
         }
         else if (collider.tag == "Guard" || collider.tag == "Handle")

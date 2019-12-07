@@ -27,6 +27,7 @@ public class JobSlotController : MonoBehaviour
     {
         if (job == null)
         {
+            clientName.SetText("");
             jobName.SetText("");
             jobImage.color = Color.clear;
         } else

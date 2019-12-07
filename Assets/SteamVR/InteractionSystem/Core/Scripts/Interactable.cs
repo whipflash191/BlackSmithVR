@@ -322,8 +322,23 @@ namespace Valve.VR.InteractionSystem
 
             if (attachedToHand != null)
             {
-                attachedToHand.DetachObject(this.gameObject, false);
-                attachedToHand.skeleton.BlendToSkeleton(0.1f);
+                bool isHandleOrPommel;
+                isHandleOrPommel = gameObject.name.Contains("Handle");
+                if(!isHandleOrPommel)
+                isHandleOrPommel = gameObject.name.Contains("Pommel");
+
+                if (isHandleOrPommel)
+                {
+                    Transform parent = gameObject.transform.parent;
+                    attachedToHand.DetachObject(this.gameObject, false);
+                    gameObject.transform.SetParent(parent);
+                }
+                else
+                {
+                    attachedToHand.DetachObject(this.gameObject, false);
+                    attachedToHand.skeleton.BlendToSkeleton(0.1f);
+                }
+
             }
             
             if (highlightHolder != null)

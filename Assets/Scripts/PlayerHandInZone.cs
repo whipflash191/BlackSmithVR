@@ -43,11 +43,12 @@ public class PlayerHandInZone : MonoBehaviour
             {
                 foreach (WeaponItem requiredItem in currentJob.requiredItems)
                 {
-                    if (requiredItem.weaponBlade.GetComponent<MaterialInteraction>().bladeName == other.gameObject.GetComponent<MaterialInteraction>().bladeName)
+                    MaterialInteraction test = requiredItem.weaponBlade.GetComponentInChildren<MaterialInteraction>(true);
+                    if (test.bladeName == other.gameObject.GetComponentInChildren<MaterialInteraction>().bladeName)
                     {
-                        if(requiredItem.weaponHandle.GetComponent<PartIdentifier>().isHandle && requiredItem.weaponHandle.GetComponent<PartIdentifier>().handleName == other.gameObject.GetComponent<PartIdentifier>().handleName)
+                        if(requiredItem.weaponHandle.GetComponent<PartIdentifier>().isHandle && requiredItem.weaponHandle.GetComponent<PartIdentifier>().handleName == other.gameObject.GetComponentInChildren<MaterialInteraction>().weaponHandle.GetComponent<PartIdentifier>().handleName)
                         {
-                            if (requiredItem.weaponHandle.GetComponent<PartIdentifier>().isPommel && requiredItem.weaponHandle.GetComponent<PartIdentifier>().pommelName == other.gameObject.GetComponent<PartIdentifier>().pommelName)
+                            if (requiredItem.weaponPommel.GetComponent<PartIdentifier>().isPommel && requiredItem.weaponPommel.GetComponent<PartIdentifier>().pommelName == other.gameObject.GetComponentInChildren<MaterialInteraction>().weaponPommel.GetComponent<PartIdentifier>().pommelName)
                             {
                                 currentJob.requiredItems.Remove(requiredItem);
                             }

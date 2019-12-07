@@ -154,130 +154,6 @@ MonoBehaviour:
   distFromTarget: {x: 0, y: 0, z: 0}
   onAnvil: 0
   myOppositeSide: {fileID: 4465801680231870071}
---- !u!54 &4465801679780343173
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5681391954397085554}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
---- !u!65 &4465801679780343192
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5681391954397085554}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.16020581, y: 0.09800173, z: 0.34866616}
-  m_Center: {x: 0.080102906, y: 0.04768364, z: -0.14038862}
---- !u!114 &4465801679780343195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5681391954397085554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponBlade: {fileID: 5681391954397085554}
-  weaponHandle: {fileID: 0}
-  weaponPommel: {fileID: 0}
-  bladeName: Sanghelios
-  currentForgeStage: 2
-  mesh: {fileID: 6131583981929190484}
-  nextModel: {fileID: 5681391955597098417}
-  tempratureProgress: 0
-  currentTime: 0
-  heating: 0
-  isHardened: 0
-  colliders:
-  - {fileID: 4465801681086378932}
-  - {fileID: 4465801679978890333}
-  - {fileID: 4465801681095697044}
-  - {fileID: 4465801680988023629}
-  anvil: {fileID: 0}
-  GuardPos: {fileID: 0}
-  isTang: 0
-  HasGuard: 0
---- !u!54 &4465801679855608980
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5681391955597098417}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
---- !u!65 &4465801679855609067
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5681391955597098417}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.16929297, y: 0.06574551, z: 0.46991155}
-  m_Center: {x: 0.07371778, y: 0.028614795, z: -0.16821443}
---- !u!114 &4465801679855609066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5681391955597098417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponBlade: {fileID: 5681391955597098417}
-  weaponHandle: {fileID: 0}
-  weaponPommel: {fileID: 0}
-  bladeName: Sanghelios
-  currentForgeStage: 3
-  mesh: {fileID: 6131583983146014359}
-  nextModel: {fileID: 5681391954303090096}
-  tempratureProgress: 0
-  currentTime: 0
-  heating: 0
-  isHardened: 0
-  colliders:
-  - {fileID: 4465801680958550700}
-  - {fileID: 4465801681552443036}
-  - {fileID: 4465801681721267970}
-  - {fileID: 4465801680235575986}
-  anvil: {fileID: 0}
-  GuardPos: {fileID: 0}
-  isTang: 0
-  HasGuard: 0
 --- !u!1 &4465801679978890334
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,68 +464,6 @@ MonoBehaviour:
   distFromTarget: {x: 0, y: 0, z: 0}
   onAnvil: 0
   myOppositeSide: {fileID: 4465801680920729853}
---- !u!54 &4465801680492716965
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5681391955692252911}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
---- !u!65 &4465801680492716984
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5681391955692252911}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.16020581, y: 0.09800173, z: 0.34866616}
-  m_Center: {x: 0.080102906, y: 0.04768364, z: -0.14038862}
---- !u!114 &4465801680492716987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5681391955692252911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponBlade: {fileID: 5681391955692252911}
-  weaponHandle: {fileID: 0}
-  weaponPommel: {fileID: 0}
-  bladeName: Sanghelios
-  currentForgeStage: 1
-  mesh: {fileID: 6131583982745716169}
-  nextModel: {fileID: 5681391954397085554}
-  tempratureProgress: 0
-  currentTime: 0
-  heating: 0
-  isHardened: 0
-  colliders:
-  - {fileID: 4465801680466080812}
-  - {fileID: 4465801680762469896}
-  - {fileID: 4465801679731111213}
-  - {fileID: 4465801680919999997}
-  anvil: {fileID: 0}
-  GuardPos: {fileID: 0}
-  isTang: 0
-  HasGuard: 0
 --- !u!1 &4465801680566551959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,83 +1114,6 @@ MonoBehaviour:
   distFromTarget: {x: 0, y: 0, z: 0}
   onAnvil: 0
   myOppositeSide: {fileID: 4465801680566551957}
---- !u!54 &4465801681537193139
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5681391954303090096}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
---- !u!65 &4465801681537193142
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5681391954303090096}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1207484, y: 0.0610312, z: 0.4550495}
-  m_Center: {x: 0.073533416, y: 0.024110846, z: -0.19081545}
---- !u!65 &4465801681537193143
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5681391954303090096}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.19185488, y: 0.0610312, z: 0.6090025}
-  m_Center: {x: 0.069693424, y: 0.024110846, z: -0.19553125}
---- !u!114 &4465801681537193137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5681391954303090096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
-  weaponBlade: {fileID: 5681391954303090096}
-  weaponHandle: {fileID: 0}
-  weaponPommel: {fileID: 0}
-  bladeName: Sanghelios
-  currentForgeStage: 4
-  mesh: {fileID: 6131583982027642518}
-  nextModel: {fileID: 0}
-  tempratureProgress: 0
-  currentTime: 0
-  heating: 0
-  isHardened: 0
-  colliders:
-  - {fileID: 4465801680566552042}
-  - {fileID: 4465801681357376588}
-  - {fileID: 4465801680920729842}
-  - {fileID: 4465801680484250944}
-  - {fileID: 4465801681537193142}
-  - {fileID: 4465801681537193143}
-  anvil: {fileID: 0}
-  GuardPos: {fileID: 4465801681308394979}
-  isTang: 1
-  HasGuard: 0
 --- !u!1 &4465801681552443033
 GameObject:
   m_ObjectHideFlags: 0
@@ -1515,6 +1252,7 @@ GameObject:
   - component: {fileID: 4465801681649383769}
   - component: {fileID: 4465801681649383768}
   - component: {fileID: 4465801681649383772}
+  - component: {fileID: 2142102813}
   m_Layer: 0
   m_Name: SangheliosIngot
   m_TagString: Untagged
@@ -1529,7 +1267,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4465801681649383770}
-  m_LocalRotation: {x: -0, y: 0.7154808, z: -0, w: 0.6986324}
+  m_LocalRotation: {x: 0, y: 0.71547943, z: 0, w: 0.69863385}
   m_LocalPosition: {x: -0.092, y: 0.556, z: 7.483}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1689,11 +1427,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4465801681649383770}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.14567906, y: 0.17155173, z: 0.31847787}
   m_Center: {x: 0.004502043, y: 0.059908103, z: 0.038895786}
+--- !u!114 &2142102813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4465801681649383770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0bcd1489ada10a44b06c79289df6d22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Metal: {fileID: 0}
 --- !u!1 &4465801681721267983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,22 +1507,113 @@ MonoBehaviour:
   distFromTarget: {x: 0, y: 0, z: 0}
   onAnvil: 0
   myOppositeSide: {fileID: 4465801680235575997}
---- !u!54 &4465801681722813205
-Rigidbody:
+--- !u!65 &4465801681537193142
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5681391955030626835}
+  m_GameObject: {fileID: 5681391954303090096}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
+  m_Size: {x: 0.1207484, y: 0.0610312, z: 0.4550495}
+  m_Center: {x: 0.073533416, y: 0.024110846, z: -0.19081545}
+--- !u!65 &4465801681537193143
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5681391954303090096}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.19185488, y: 0.0610312, z: 0.6090025}
+  m_Center: {x: 0.069693424, y: 0.024110846, z: -0.19553125}
+--- !u!114 &4465801681537193137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5681391954303090096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
+  weaponBlade: {fileID: 5681391954303090096}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: Sanghelios
+  currentForgeStage: 4
+  mesh: {fileID: 6131583982027642518}
+  nextModel: {fileID: 0}
+  tempratureProgress: 0
+  currentTime: 0
+  heating: 0
+  isHardened: 0
+  colliders:
+  - {fileID: 4465801680566552042}
+  - {fileID: 4465801681357376588}
+  - {fileID: 4465801680920729842}
+  - {fileID: 4465801680484250944}
+  - {fileID: 4465801681537193142}
+  - {fileID: 4465801681537193143}
+  anvil: {fileID: 0}
+  GuardPos: {fileID: 4465801681308394979}
+  isTang: 1
+  HasGuard: 0
+--- !u!65 &4465801679780343192
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5681391954397085554}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.16020581, y: 0.09800173, z: 0.34866616}
+  m_Center: {x: 0.080102906, y: 0.04768364, z: -0.14038862}
+--- !u!114 &4465801679780343195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5681391954397085554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
+  weaponBlade: {fileID: 5681391954397085554}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: Sanghelios
+  currentForgeStage: 2
+  mesh: {fileID: 6131583981929190484}
+  nextModel: {fileID: 5681391955597098417}
+  tempratureProgress: 0
+  currentTime: 0
+  heating: 0
+  isHardened: 0
+  colliders:
+  - {fileID: 4465801681086378932}
+  - {fileID: 4465801679978890333}
+  - {fileID: 4465801681095697044}
+  - {fileID: 4465801680988023629}
+  anvil: {fileID: 0}
+  GuardPos: {fileID: 0}
+  isTang: 0
+  HasGuard: 0
 --- !u!65 &4465801681722813291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1814,6 +1656,98 @@ MonoBehaviour:
   - {fileID: 4465801681575952665}
   - {fileID: 4465801680231870068}
   - {fileID: 4465801679767494121}
+  anvil: {fileID: 0}
+  GuardPos: {fileID: 0}
+  isTang: 0
+  HasGuard: 0
+--- !u!65 &4465801679855609067
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5681391955597098417}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.16929297, y: 0.06574551, z: 0.46991155}
+  m_Center: {x: 0.07371778, y: 0.028614795, z: -0.16821443}
+--- !u!114 &4465801679855609066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5681391955597098417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
+  weaponBlade: {fileID: 5681391955597098417}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: Sanghelios
+  currentForgeStage: 3
+  mesh: {fileID: 6131583983146014359}
+  nextModel: {fileID: 5681391954303090096}
+  tempratureProgress: 0
+  currentTime: 0
+  heating: 0
+  isHardened: 0
+  colliders:
+  - {fileID: 4465801680958550700}
+  - {fileID: 4465801681552443036}
+  - {fileID: 4465801681721267970}
+  - {fileID: 4465801680235575986}
+  anvil: {fileID: 0}
+  GuardPos: {fileID: 0}
+  isTang: 0
+  HasGuard: 0
+--- !u!65 &4465801680492716984
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5681391955692252911}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.16020581, y: 0.09800173, z: 0.34866616}
+  m_Center: {x: 0.080102906, y: 0.04768364, z: -0.14038862}
+--- !u!114 &4465801680492716987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5681391955692252911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf0ab2bba3a036745ac7c1c8b10e9a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partMaterial: {fileID: 11400000, guid: bbbd0ba889b0feb4590062698d7b1502, type: 2}
+  weaponBlade: {fileID: 5681391955692252911}
+  weaponHandle: {fileID: 0}
+  weaponPommel: {fileID: 0}
+  bladeName: Sanghelios
+  currentForgeStage: 1
+  mesh: {fileID: 6131583982745716169}
+  nextModel: {fileID: 5681391954397085554}
+  tempratureProgress: 0
+  currentTime: 0
+  heating: 0
+  isHardened: 0
+  colliders:
+  - {fileID: 4465801680466080812}
+  - {fileID: 4465801680762469896}
+  - {fileID: 4465801679731111213}
+  - {fileID: 4465801680919999997}
   anvil: {fileID: 0}
   GuardPos: {fileID: 0}
   isTang: 0
@@ -1897,11 +1831,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: 3e5c584593c63e34189be500617a23ef,
         type: 3}
-      propertyPath: m_BlendShapeWeights.Array.data[0]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7561110372842451503, guid: 3e5c584593c63e34189be500617a23ef,
-        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e8ee49985b2e3a242988b9d606e5cce1, type: 2}
@@ -1942,12 +1871,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e5c584593c63e34189be500617a23ef, type: 3}
---- !u!137 &6131583982745716169 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7561110372842451503, guid: 3e5c584593c63e34189be500617a23ef,
-    type: 3}
-  m_PrefabInstance: {fileID: 4465801679815784422}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8683786950527327484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 3e5c584593c63e34189be500617a23ef,
@@ -1957,6 +1880,12 @@ Transform:
 --- !u!1 &5681391955692252911 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 3e5c584593c63e34189be500617a23ef,
+    type: 3}
+  m_PrefabInstance: {fileID: 4465801679815784422}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &6131583982745716169 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7561110372842451503, guid: 3e5c584593c63e34189be500617a23ef,
     type: 3}
   m_PrefabInstance: {fileID: 4465801679815784422}
   m_PrefabAsset: {fileID: 0}
@@ -2039,6 +1968,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: a8042a4b7ef07a9409e88e1814f4ca66,
         type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e8ee49985b2e3a242988b9d606e5cce1, type: 2}
+    - target: {fileID: 7561110372842451503, guid: a8042a4b7ef07a9409e88e1814f4ca66,
+        type: 3}
       propertyPath: m_AABB.m_Center.x
       value: 0.07371778
       objectReference: {fileID: 0}
@@ -2072,21 +2006,11 @@ PrefabInstance:
       propertyPath: m_DirtyAABB
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7561110372842451503, guid: a8042a4b7ef07a9409e88e1814f4ca66,
-        type: 3}
-      propertyPath: m_BlendShapeWeights.Array.data[0]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7561110372842451503, guid: a8042a4b7ef07a9409e88e1814f4ca66,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e8ee49985b2e3a242988b9d606e5cce1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8042a4b7ef07a9409e88e1814f4ca66, type: 3}
---- !u!137 &6131583983146014359 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7561110372842451503, guid: a8042a4b7ef07a9409e88e1814f4ca66,
+--- !u!1 &5681391955597098417 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: a8042a4b7ef07a9409e88e1814f4ca66,
     type: 3}
   m_PrefabInstance: {fileID: 4465801680460391608}
   m_PrefabAsset: {fileID: 0}
@@ -2096,9 +2020,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4465801680460391608}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5681391955597098417 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: a8042a4b7ef07a9409e88e1814f4ca66,
+--- !u!137 &6131583983146014359 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7561110372842451503, guid: a8042a4b7ef07a9409e88e1814f4ca66,
     type: 3}
   m_PrefabInstance: {fileID: 4465801680460391608}
   m_PrefabAsset: {fileID: 0}
@@ -2113,11 +2037,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Swordstage1
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 2d06d6b514ff6a542a68733ddf3e8584,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2d06d6b514ff6a542a68733ddf3e8584,
         type: 3}
@@ -2181,9 +2100,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: 2d06d6b514ff6a542a68733ddf3e8584,
         type: 3}
-      propertyPath: m_BlendShapeWeights.Array.data[0]
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e8ee49985b2e3a242988b9d606e5cce1, type: 2}
     - target: {fileID: 7561110372842451503, guid: 2d06d6b514ff6a542a68733ddf3e8584,
         type: 3}
       propertyPath: m_AABB.m_Center.x
@@ -2219,13 +2138,14 @@ PrefabInstance:
       propertyPath: m_DirtyAABB
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7561110372842451503, guid: 2d06d6b514ff6a542a68733ddf3e8584,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e8ee49985b2e3a242988b9d606e5cce1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d06d6b514ff6a542a68733ddf3e8584, type: 3}
+--- !u!1 &5681391955030626835 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 2d06d6b514ff6a542a68733ddf3e8584,
+    type: 3}
+  m_PrefabInstance: {fileID: 4465801681033202458}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8683786951725817856 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 2d06d6b514ff6a542a68733ddf3e8584,
@@ -2235,12 +2155,6 @@ Transform:
 --- !u!137 &6131583981563951413 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7561110372842451503, guid: 2d06d6b514ff6a542a68733ddf3e8584,
-    type: 3}
-  m_PrefabInstance: {fileID: 4465801681033202458}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5681391955030626835 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 2d06d6b514ff6a542a68733ddf3e8584,
     type: 3}
   m_PrefabInstance: {fileID: 4465801681033202458}
   m_PrefabAsset: {fileID: 0}
@@ -2323,32 +2237,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: 7d0d9fc6c6e3bb1419be07569ec4aa86,
         type: 3}
-      propertyPath: m_AABB.m_Center.x
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e8ee49985b2e3a242988b9d606e5cce1, type: 2}
     - target: {fileID: 7561110372842451503, guid: 7d0d9fc6c6e3bb1419be07569ec4aa86,
         type: 3}
-      propertyPath: m_AABB.m_Center.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7561110372842451503, guid: 7d0d9fc6c6e3bb1419be07569ec4aa86,
-        type: 3}
-      propertyPath: m_AABB.m_Center.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7561110372842451503, guid: 7d0d9fc6c6e3bb1419be07569ec4aa86,
-        type: 3}
-      propertyPath: m_AABB.m_Extent.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7561110372842451503, guid: 7d0d9fc6c6e3bb1419be07569ec4aa86,
-        type: 3}
-      propertyPath: m_AABB.m_Extent.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7561110372842451503, guid: 7d0d9fc6c6e3bb1419be07569ec4aa86,
-        type: 3}
-      propertyPath: m_AABB.m_Extent.z
+      propertyPath: m_UpdateWhenOffscreen
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: 7d0d9fc6c6e3bb1419be07569ec4aa86,
@@ -2356,34 +2250,8 @@ PrefabInstance:
       propertyPath: m_DirtyAABB
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7561110372842451503, guid: 7d0d9fc6c6e3bb1419be07569ec4aa86,
-        type: 3}
-      propertyPath: m_BlendShapeWeights.Array.data[0]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7561110372842451503, guid: 7d0d9fc6c6e3bb1419be07569ec4aa86,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e8ee49985b2e3a242988b9d606e5cce1, type: 2}
-    - target: {fileID: 7561110372842451503, guid: 7d0d9fc6c6e3bb1419be07569ec4aa86,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7561110372842451503, guid: 7d0d9fc6c6e3bb1419be07569ec4aa86,
-        type: 3}
-      propertyPath: m_UpdateWhenOffscreen
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d0d9fc6c6e3bb1419be07569ec4aa86, type: 3}
---- !u!137 &6131583981929190484 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7561110372842451503, guid: 7d0d9fc6c6e3bb1419be07569ec4aa86,
-    type: 3}
-  m_PrefabInstance: {fileID: 4465801681675150971}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8683786952351108449 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 7d0d9fc6c6e3bb1419be07569ec4aa86,
@@ -2393,6 +2261,12 @@ Transform:
 --- !u!1 &5681391954397085554 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 7d0d9fc6c6e3bb1419be07569ec4aa86,
+    type: 3}
+  m_PrefabInstance: {fileID: 4465801681675150971}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &6131583981929190484 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7561110372842451503, guid: 7d0d9fc6c6e3bb1419be07569ec4aa86,
     type: 3}
   m_PrefabInstance: {fileID: 4465801681675150971}
   m_PrefabAsset: {fileID: 0}
@@ -2475,6 +2349,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: f04590a445b814c4489476d12c4ed51c,
         type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e8ee49985b2e3a242988b9d606e5cce1, type: 2}
+    - target: {fileID: 7561110372842451503, guid: f04590a445b814c4489476d12c4ed51c,
+        type: 3}
       propertyPath: m_AABB.m_Center.x
       value: 0.069693424
       objectReference: {fileID: 0}
@@ -2508,24 +2387,8 @@ PrefabInstance:
       propertyPath: m_DirtyAABB
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7561110372842451503, guid: f04590a445b814c4489476d12c4ed51c,
-        type: 3}
-      propertyPath: m_BlendShapeWeights.Array.data[0]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7561110372842451503, guid: f04590a445b814c4489476d12c4ed51c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e8ee49985b2e3a242988b9d606e5cce1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f04590a445b814c4489476d12c4ed51c, type: 3}
---- !u!1 &5681391954303090096 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: f04590a445b814c4489476d12c4ed51c,
-    type: 3}
-  m_PrefabInstance: {fileID: 4465801681781662905}
-  m_PrefabAsset: {fileID: 0}
 --- !u!137 &6131583982027642518 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7561110372842451503, guid: f04590a445b814c4489476d12c4ed51c,
@@ -2535,6 +2398,12 @@ SkinnedMeshRenderer:
 --- !u!4 &8683786952457686947 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: f04590a445b814c4489476d12c4ed51c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4465801681781662905}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5681391954303090096 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: f04590a445b814c4489476d12c4ed51c,
     type: 3}
   m_PrefabInstance: {fileID: 4465801681781662905}
   m_PrefabAsset: {fileID: 0}

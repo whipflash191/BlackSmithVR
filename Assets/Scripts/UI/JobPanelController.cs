@@ -84,7 +84,6 @@ public class JobPanelController : MonoBehaviour
         if(PlayerHandInZone.instance.currentJob != null)
         {
             PlayerHandInZone.instance.currentJob = null;
-            PlayerHandInZone.instance.activeParticle.Stop();
         }
     }
 
