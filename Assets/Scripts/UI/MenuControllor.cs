@@ -33,7 +33,6 @@ public class MenuControllor : MonoBehaviour
     }
     public void OnClickShopTabButton()
     {
-        print("testtesttest");
         menuPanels[2].SetActive(true);
         CloseOtherPanels(menuPanels[2]);
     }

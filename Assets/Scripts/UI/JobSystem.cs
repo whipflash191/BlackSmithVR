@@ -26,15 +26,19 @@ public class JobSystem : MonoBehaviour
         foreach  (Transform child in JobSystemPanel.transform)
         {
             JobSlotController instance = child.GetComponent<JobSlotController>();
-            if(index < availableJobs.Count)
+            if (instance != null)
             {
-                instance.job = availableJobs[index];
-            } else
-            {
-                instance.job = null;
+                if (index < availableJobs.Count)
+                {
+                    instance.job = availableJobs[index];
+                }
+                else
+                {
+                    instance.job = null;
+                }
+                instance.UpdateInfo();
+                index++;
             }
-            instance.UpdateInfo();
-            index++;
         }
     }
 
