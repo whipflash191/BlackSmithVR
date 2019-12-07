@@ -1,20 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59b352b457031734aa14f97d659591dc, type: 3}
-  m_Name: Job 7-Orbital
-  m_EditorClassIdentifier: 
-  clientName: Samuel
-  jobName: Carpenter Needs Unique Hammer
-  jobDescription: A friend a mine broke his work hammer. Please provide a replacement.
-  jobIcon: {fileID: 21300000, guid: 6795ddcba31ceac49b8191fcd9d7a7a7, type: 3}
-  Reward: 10
-  requireItems: [Orbital]
+version https://git-lfs.github.com/spec/v1
+oid sha256:7394df77e56f08171e3fceb3226c42976e6b30b2a79c95e600165f9f78e22825
+size 732
