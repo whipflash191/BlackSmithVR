@@ -169,6 +169,7 @@ public class MaterialInteraction : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("collision");
         if (collision.gameObject.tag == "Fire")
         {
             heating = true;
