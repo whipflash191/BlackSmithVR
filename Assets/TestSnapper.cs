@@ -38,11 +38,12 @@ public class TestSnapper : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(isHandle && collision.gameObject.GetComponent<MaterialInteraction>())
+        MaterialInteraction test = collision.gameObject.GetComponent<MaterialInteraction>();
+        if (isHandle && test != null)
         {
             SnapToObject(collision.gameObject);
             collision.gameObject.GetComponent<MaterialInteraction>().weaponHandle = gameObject;
-        } else if (isPommel && collision.gameObject.GetComponent<TestSnapper>())
+        } else if (isPommel && test != null)
         {
             SnapToObject(collision.gameObject);
             collision.gameObject.transform.parent.GetComponent<MaterialInteraction>().weaponPommel = gameObject;
