@@ -43,7 +43,7 @@ public class MaterialInteraction : MonoBehaviour
     void Start()
     {
         material = GetComponent<Renderer>().material;
-        anvil = GameObject.FindGameObjectWithTag("anvil");
+        anvil = GameObject.FindGameObjectWithTag("Anvil");
     }
 
     // Update is called once per frame
